@@ -85,6 +85,7 @@ $("#account_login").click(function(){   //账号登陆发送登陆请求
                 return;
             }
             if( data.code == "account_password_error" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -96,6 +97,7 @@ $("#account_login").click(function(){   //账号登陆发送登陆请求
                 return;
             }
             if( data.code == "account_login_fail" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -107,6 +109,7 @@ $("#account_login").click(function(){   //账号登陆发送登陆请求
                 return;
             }
             if( data.code == "param_incomplete" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -184,6 +187,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "param_incomplete" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -195,6 +199,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "phone_format_error" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -206,6 +211,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "sms_captcha_not_found" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -217,6 +223,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "sms_captcha_illegal" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -228,6 +235,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "sms_captcha_fail" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -239,6 +247,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "account_login_fail" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
@@ -250,6 +259,7 @@ $("#SMS_login").click(function(){ //短信快捷登陆发送登陆请求
                 return;
             }
             if( data.code == "account_not_found" ){
+                remove_error($(".prompt"),"57px")
                 var str = `
                     <div class="prompt" style="color:red;margin-top:10px">
                         <img src="images/error.png" alt="" width="21px" style="vertical-align: middle;">
