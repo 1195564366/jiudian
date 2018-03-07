@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Set_up_public.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <main>
+        <div class="login">
+            <div class="nav">
+                <ul>
+                    <li class="active" data-id="1">
+                        账号登录
+                        <div></div>
+                    </li>
+                    <li data-id="2">
+                        短信快捷登录
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="account_login">
+                <ul>
+                    <li>
+                        <input type="text" placeholder="用户名/手机号" class="phone">
+                        <img src="images/user_img.png" alt="">
+                        
+                    </li>
+                    <li>
+                        <input type="password" placeholder="请输入密码" class="pwd" maxlength="32">
+                        <img src="images/user_pwd.png" alt="">
+                    </li>
+                    <li>
+                        <a href="reset.html">忘记密码？</a>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <button type="button" id="account_login" disabled="disabled">登录</button>
+                        
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <div class="switch">
+                    <span>还没有APIS账号吗？</span>
+                    <a href="register.html">注册</a>
+                </div>
+            </div>
+            <div class="SMS_login">
+                <ul>
+                    <li>
+                        <input type="text" placeholder="手机号码" class="phone" maxlength="11">
+                        
+                    </li>
+                    <li>
+                        <input type="text" placeholder="输入右侧图文验证码" class="img_yzm" maxlength="4">
+                        <div class="graphical_yzm"></div>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="输入短信验证码" class="yzm" maxlength="6">
+                        <button class="submit_yzm">获取验证码</button>
+                        <button class="see_yzm" disabled="disabled">查看验证码</button>
+                    </li>
+                    <li>
+                        <button type="button" id="SMS_login">登陆</button>
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <div class="switch">
+                    <span>还没有APIS账号吗？</span>
+                    <a href="register.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/Hint_information.js"></script>
+    <script src="js/user_common.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

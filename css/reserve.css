@@ -1,0 +1,432 @@
+.Hotel_line{
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+.Hotel_line_right{
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    width: 691px;
+    left: 0;
+}
+.main{
+    width: 1012px;
+    height:551px;
+    margin: 91px auto 323px auto;
+    /* background: #FFFFFF;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.18); */
+}
+.main .main_left{
+    float: left;
+    width: 305px;
+}
+.main .main_left .Hotel_price{
+    margin-bottom: 23px;
+}
+.main .main_left .Hotel_price img{
+    width: 305px;
+    height: 234px;
+}
+.main .main_left .Hotel_name{
+    font-family: HiraginoSansGB-W6;
+    font-size: 16px;
+    color: #3E3E3E;
+    font-weight: bold;
+    margin-bottom: 9px;
+    width: 305px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.main .main_left .Hotel_position{
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #3E3E3E;
+    width: 305px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;
+}
+.main .main_left .Hotel_phone{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 9px;
+}
+.main .main_left .Room_name{
+    margin-top: 17px;
+    font-family: HiraginoSansGB-W6;
+    font-size: 14px;
+    color: #3E3E3E;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+.main .main_left .BedType{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 9px;
+}
+.main .main_left .Room_area{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 11px;
+}
+.main .main_left .Room_wifi{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 12px;
+}
+.main .main_left .breakfast{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+}
+/* 右边 */
+.main .mian_right{
+    position: relative;
+    width: 691px;
+    height: 551px;
+    background: #FFFFFF;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.18);
+    float: right;
+    padding: 24px 27.6px 28px 22px;
+    box-sizing: border-box;
+}
+.main .mian_right .title{
+    font-family: HiraginoSansGB-W6;
+    font-size: 16px;
+    color: #3E3E3E;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.main .mian_right .Room_type_name{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 20px;
+}
+.main .mian_right .Check_time{
+    position: relative;
+    margin-bottom: 15px;
+    line-height: 36px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+}
+.main .mian_right .Check_time input{
+    width: 227px;
+    height: 36px;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 4px;
+    background: url(../images/icon_day.png) no-repeat;
+    background-position: 200px 6px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    font-family: HiraginoSansGB-W6;
+    font-size: 14px;
+    /* color: #3E3E3E; */
+    letter-spacing: 0;
+    line-height: 14px;
+    color: #000;
+    font-weight: bold;
+}
+.main .mian_right .Check_time div.Check_week{
+    width: 42px;
+    position: absolute;
+    display: inline-block;
+    top:0;
+    right: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    left: 225px;
+}
+.main .mian_right .Check_time div.Check_out_week{
+    width: 42px;
+    position: absolute;
+    display: inline-block;
+    top:0;
+    right: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    left: 490px;
+}
+.main .mian_right .Check_time .calendar_time{
+    z-index:  2;
+    position: absolute;
+    width: 227px;
+    background: #FFFFFF;
+    border: 1px solid #D3DCE6;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
+    border-radius: 2px;
+    top: 45px;
+}
+.main .mian_right .Check_time .Check_calendar{
+    left: 75px;
+    display: none;
+}
+.main .mian_right .Check_time .Check_out_calendar{
+    left: 341px;
+    display: none;
+}
+.main .mian_right .Check_time .calendar_time .header{
+    height: 19px;
+    line-height: 19px;
+    margin-top: 19px;
+    position: relative;
+}
+.main .mian_right .Check_time .calendar_time button{
+    width: 21px;
+    height: 21px;
+    border: none;
+    outline: transparent;
+    float: left;
+}
+.main .mian_right .Check_time .calendar_time button.last_year{
+    background: url(../images/icon_back_year.png);
+    position: absolute;
+    left: 10px;
+    top: -1px;
+}
+.main .mian_right .Check_time .calendar_time button.last_month{
+    background: url(../images/icon_back_month.png);
+    position: absolute;
+    left: 35px;
+    top:0;
+}
+
+.main .mian_right .Check_time .calendar_time button.next_year{
+    position: absolute;
+    right: 10px;
+    background: url(../images/icon_back_year.png);
+    transform: rotate(180deg);
+    top: 0px;
+}
+.main .mian_right .Check_time .calendar_time button.next_month{
+    position: absolute;
+    right: 35px;
+    background: url(../images/icon_back_month.png);
+    transform: rotate(180deg);
+    top: -1px;
+}
+.main .mian_right .Check_time .calendar_time .years{
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #475669;
+    display: inline-block;
+    margin-left: 78px;
+}
+.main .mian_right .Check_time .calendar_time .week{
+    width: 210px;
+    height: 12px;
+    margin: 23px auto 0 auto;
+}
+.main .mian_right .Check_time .calendar_time .week li{
+    float: left;
+    width: 30px;
+    font-family: AppleSystemUIFont;
+    font-size: 8px;
+    color: #8492A6;
+    line-height: 12px;
+    text-align: center;
+}
+.main .mian_right .Check_time .calendar_time .day{
+    width: 210px;
+    margin: 10px auto 0 auto;
+}
+.main .mian_right .Check_time .calendar_time .day li{
+    float: left;
+    width: 30px;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    color: #475669;
+    line-height: 32px;
+    cursor: pointer;
+    text-align: center;
+}
+.main .mian_right .Check_time .calendar_time .day li.disable{
+    cursor: default;
+    color: #8492A6;
+}
+.main .mian_right .Check_time .calendar_time .day li.active{
+    color: #FFFFFF;
+    background: #5944C3; 
+}
+.main .mian_right .Check_time .Statistics{
+    float: right;
+}
+.main .mian_right .Room_count{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 18px;
+    position: relative;
+}
+.main .mian_right .Room_count .count{
+    width: 110px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #1F2D3D;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.main .mian_right .Room_count button{
+    width: 36px;
+    height: 36px;
+    outline: transparent;
+    position: absolute;
+}
+.main .mian_right .Room_count button.plus{
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    background: url("../images/icon_minus.png") no-repeat;
+    background-position: 9px 9px;
+    left:  184px;
+}
+.main .mian_right .Room_count button.reduce{
+    border: 1px solid rgba(0,0,0,0.25);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    left: 220px;
+    background: url("../images/icon_plus.png") no-repeat;
+    background-position: 9px 9px;
+}
+.main .mian_right .Room_count .room_count{
+    display: inline-block;
+    margin-left: 100px;
+}
+.main .mian_right .Room_price{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 23px;
+}
+.main .mian_right .Room_price span{
+    font-family: HiraginoSansGB-W6;
+    font-size: 18px;
+    color: #FC4209;
+    line-height: 21px;
+    font-weight: bold;
+}
+.main .mian_right .title_m{
+    margin-top: 45px;
+}
+.main .mian_right .user_name{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 14px;
+}
+.main .mian_right .user_name img{
+    vertical-align: middle;
+}
+.main .mian_right .user_name input{
+    width: 180px;
+    height: 36px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 4px;
+    padding-left: 10px;
+    opacity: 0.7;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.main .mian_right .user_name .error{
+    display: inline-block;
+    margin-left: 14px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FF4949;
+    letter-spacing: 0;
+}
+
+.main .mian_right .user_phone{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 25px;
+}
+.main .mian_right .user_phone img{
+    vertical-align: middle;
+}
+.main .mian_right .user_phone input{
+    width: 180px;
+    height: 36px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 4px;
+    padding-left: 10px;
+    opacity: 0.7;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.main .mian_right .user_phone .error{
+    display: inline-block;
+    margin-left: 14px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FF4949;
+    letter-spacing: 0;
+}
+.main .mian_right .confirm_price{
+    margin-top: 47px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.main .mian_right .confirm_price .invoice{
+    float: left;
+}
+.main .mian_right .confirm_price .all_price{
+    float: right;
+    margin-top: 5px;
+}
+.main .mian_right .confirm_price .all_price span{
+    font-family: HiraginoSansGB-W6;
+    font-size: 18px;
+    color: #FC4209;
+    letter-spacing: 0;
+    line-height: 17px;
+    font-weight: bold;
+}
+.main .mian_right .Submit_Order{
+    float: right;
+    width: 113px;
+    height: 36px;
+    border: none;
+    outline: transparent;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    border-radius: 3px;
+    margin-top: 10px;
+    background: #5944C3;
+}

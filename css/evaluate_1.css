@@ -1,0 +1,184 @@
+.main{
+    width: 736px;
+    /* height: 567px; */
+    margin: 92px auto 30px auto;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+    padding: 33px 40px 36px 35px;
+    box-sizing: border-box;
+}
+
+.main .Hotel_price{
+    width: 204px;
+    height: 136px;
+    margin-bottom: 31px;
+}
+.main .main_right{
+    width: 431px;
+    float: right;
+    height:136px;
+    padding-top:40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.main .main_right .Hotel_name{
+    font-family: HiraginoSansGB-W6;
+    font-size: 16px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.main .main_right .Room_name{
+    font-family: HiraginoSansGB-W3;
+    font-size: 16px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.main .main_right .Room_price{
+    position: absolute;
+    right: 0;
+    top: 56px;
+}
+.main .main_right .Room_price span{
+    font-family: HiraginoSansGB-W6;
+    font-size: 20px;
+    color: #FC4209;
+    letter-spacing: 0;
+    line-height: 21px;
+    font-weight: bold;
+}
+.main .evaluate{
+    margin-top: 15px;
+    margin-bottom: 23px;
+    position: relative;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+   
+}
+.main .evaluate ul{
+   position: absolute;
+   top:0;
+   left: 87px;
+}
+.main .evaluate ul li{
+    float: left;
+    cursor: pointer;
+    margin-right: 6px;
+}
+.main .the_sun{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+.main .the_sun .evaluation_content{
+    width: 574px;
+    height: 202px;
+    float: right;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: transparent;
+    padding: 12px 13px;
+    box-sizing: border-box;
+    opacity: 0.7;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    resize:none 
+}
+.main .Upload_photos{
+    line-height: 58px;
+    padding-left: 87px;
+}
+.main .Upload_photos .Choose_photo{
+    width: 58px;
+    height: 58px;
+    border: 1px solid rgba(0,0,0,0.2);
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+}
+.main .Upload_photos .Choose_photo img{
+    width: 26px;
+    margin-top:16px; 
+    cursor: pointer;
+}
+.main .Upload_photos .Choose_photo #Upload{
+    width: 58px;
+    height: 58px;
+    border: none;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left:0;
+    cursor: pointer;
+    display: inline-block;
+}
+.main .Upload_photos .Hint{
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+}
+.main .Upload_photos .container{
+    float: left;
+}
+.main .Upload_photos .container .img_cr{
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+}
+.main .Upload_photos .container .img_cr .img_show{
+    width: 58px;
+    height: 58px;
+    float:left;
+}
+.main .Upload_photos .container .img_cr .delete{
+    color: #fff;
+    background: red;
+    outline: transparent;
+    border: none;
+    width: 15px;
+    height: 20px;
+    font-size: 6px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.submit{
+    width: 736px;
+    margin: 0 auto 256px auto;
+}
+#submit{
+    width: 90px;
+    height: 40px;
+    float: right;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    background: #959595;
+    border: none;
+    outline: transparent;
+    border-radius: 3px;
+}
+#submit.active{
+    background: #5944C3;
+}

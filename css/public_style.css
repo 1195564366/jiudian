@@ -1,0 +1,160 @@
+
+header{
+    z-index: 2;
+    min-width: 400px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(89,68,195,1);
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.20);
+    position: fixed;
+    min-width:  500px;
+    top:0;
+}
+header>a.logo{
+    display: inline-block;
+    height:33px;
+    margin-left: 4.3%;
+    margin-top: 14px;
+    line-height: 33px;
+}
+header>a.logo img{
+    width: 76.8px;
+    height: 25px;
+    vertical-align: middle;
+    float: left;
+    margin-top: 5px;
+    margin-right: 19.2px;
+}
+header>a div.vertical_line{
+    height: 24px;
+    border: 1px solid #FFFFFF;
+    margin-right: 17px;
+    float: left;
+    margin-top: 4px;
+}
+header>a div{
+    display: inline-block;
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+header .login_and_register{
+    display: inline-block;
+    float: right;
+    margin-right: 2.8%;
+    height:20px;
+    line-height: 20px;
+    margin-top: 21px;
+}
+header .login_and_register a{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-left: 25px;
+}
+
+header .login_information{
+    float: right;
+    display:none;
+    margin-right: 1.4%;
+    height:36px;
+    line-height: 36px;
+    margin-top: 11px;
+}
+header .login_information .user_head_img{
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin-right: 10px;
+    border-radius:  50%;
+}
+header .login_information .user_name{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    float: left;
+    margin-right: 10px;
+    /* width: 100px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;
+}
+header .login_information .switch_page{
+    display: inline-block;
+    width: 18px;
+    height:18px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 3px;
+    position: relative;
+}
+header .login_information .switch_page .control{
+    transition: transform .5s;
+    width: 18px;
+    height: 18px;
+}
+header .login_information .switch_page:hover .control{
+    transform: rotate(180deg)
+}
+header .login_information .switch_page:hover ul{
+    opacity: 1;
+}
+header .login_information .switch_page ul{
+    top:35px;
+    left: -66px;
+    position: absolute;
+    padding-top: 10px;
+    width: 109px;
+    height: 120px;
+    background: #FFFFFF;
+    border: 1px solid #F2EEF3;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.10);
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 3;
+}
+header .login_information .switch_page ul li{
+    text-align: center;
+}
+header .login_information .switch_page ul li a{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #222629;
+    letter-spacing: 0;
+}
+header .login_information .switch_page ul li a img{
+    vertical-align: middle;
+}
+header .login_information .switch_page .triangle{
+    position: absolute;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    top: -16px;
+    left: 67px;
+}
+header .login_information .order_form{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    float: left;
+}
+
+footer{
+    width: 100%;
+    min-width: 1010px;
+    height: 59px;
+    background: #5944C3;
+    line-height: 59px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}

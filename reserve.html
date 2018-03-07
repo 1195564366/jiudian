@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒店预定——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="css/reserve.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main_left">
+            <div class="Hotel_price">
+                <img src="php/images/jiudian.png" alt="">
+            </div>
+            <div class="Hotel_name">
+                
+            </div>
+            <div class="Hotel_position">
+                
+            </div>
+            <div class="Hotel_phone">
+                商家热线：<span></span>
+            </div>
+            <div class="Hotel_line"></div>
+            <div class="Room_name"></div>
+            <div class="BedType">
+                床型：<span></span>
+            </div>
+            <div class="Room_area">
+                面积：<span></span> M²
+            </div>
+            <div class="Room_wifi">
+                宽带：<span></span>
+            </div>
+            <div class="breakfast">
+                早餐：<span></span>
+            </div>
+        </div>
+        <div class="mian_right">
+            <div class="title">预订信息</div>
+            <div class="Room_type_name">
+                房型名称：<span></span>
+            </div>
+            <div class="Check_time">
+                入住时间：
+                <input type="text" readonly="value" class="Check" placeholder="请选择入住时间">
+                <div class="Check_week"></div>
+                &nbsp;
+                至
+                &nbsp;
+                <input type="text" readonly="value" class="Check_out" placeholder="请选择退房时间">
+                <div class="Check_out_week"></div>
+                <div class="Check_calendar calendar_time">
+                    <div class="header">
+                        <button class="last_year"></button>
+                        <button class="last_month"></button>
+                        <div class="years">
+                            <span class="year"></span>年&nbsp;<span class="month"></span>月
+                        </div>
+                        <button class="next_year"></button>
+                        <button class="next_month"></button>
+                    </div>
+                    <div class="week">
+                        <ul>
+                            <li>日</li>
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li>六</li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Check_out_calendar calendar_time">
+                    <div class="header">
+                        <button class="last_year"></button>
+                        <button class="last_month"></button>
+                        <div class="years">
+                            <span class="year"></span>年&nbsp;<span class="month"></span>月
+                        </div>
+                        <button class="next_year"></button>
+                        <button class="next_month"></button>
+                    </div>
+                    <div class="week">
+                        <ul>
+                            <li>日</li>
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li>六</li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Statistics"></div>
+            </div>
+            <div class="Room_count">
+                房间数量：
+                <input type="text" class="count" value="1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                <button class="plus" disabled="disabled"></button>
+                <button class="reduce"></button>
+                <div class="room_count">
+                    
+                </div>
+            </div>
+            <div class="Room_price">
+                房费总计：¥ <span></span>
+            </div>
+            <div class="Hotel_line_right"></div>  
+            <div class="title title_m">
+                入住信息
+            </div> 
+            <div class="user_name">
+                <img src="images/icon_must.png" alt="">  客人姓名：
+                <input type="text" placeholder="只需填写一位">
+                <div class="error"></div>
+            </div>
+            <div class="user_phone">
+                <img src="images/icon_must.png" alt="">  联系电话：
+                <input type="text" placeholder="请输入手机号码" maxlength="11">
+                <div class="error"></div>
+            </div>
+            <div class="Hotel_line_right"></div>  
+            <div class="confirm_price">
+                <div class="invoice">
+                    如需发票，请向酒店前台索取.
+                </div>
+                <div class="all_price">
+                    需支付：¥<span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <button class="Submit_Order"> 提交订单 </button>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/reserve.js"></script>
+</body>
+</html>

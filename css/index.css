@@ -1,0 +1,408 @@
+header{
+    background-color: rgba(89,68,195,.8);
+    min-width: 1010px;
+}
+.search_banner{
+    padding-top: 145px;
+    width: 100%;
+    height: 157px;
+    background: url("../images/index_banner.png");
+    background-size: 100% 100%;
+    min-width: 1010px;
+}
+.search_banner .search_input{
+    text-align: center;
+    height: 32px;
+}
+.search_banner .search_input input{
+    width: 240px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 11px;
+    border: none;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #303030;
+    letter-spacing: 0;
+}
+.search_banner .search_input input::-moz-placeholder{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #303030;
+    letter-spacing: 0;
+}
+.search_banner .search_input>div{
+    margin-right: 28px;
+    display: inline-block;
+    width: 240px;
+    height: 32px;
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    display: inline-block;
+}
+.search_banner .search_input input.city_input{
+    background: url("../images/icon_location.png") no-repeat;
+    background-position:213px 5px;
+}
+.search_banner .search_input input.time_input{
+    background: url("../images/icon_day.png") no-repeat;
+    background-position:213px 5px;
+}
+.search_banner .search_input .city{
+    position: relative;
+}
+.search_banner .search_input .city .city_data{
+    z-index:  2;
+    position: absolute;
+    width: 515px;
+    top:38px;
+    left:0;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
+    border-radius: 2px;
+    display: none;
+    cursor: pointer;
+}
+
+.search_banner .search_input .city .city_data ul.title li{
+    float: left;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 2px solid #5944C3;
+}
+.search_banner .search_input .city .city_data ul.title li.active{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+.search_banner .search_input .city .city_data ul.city_name li{
+    float: left;
+    width: 85.83333333333333px;
+    height: 43.666666666666664px;
+    line-height: 43.666666666666664px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.search_banner .search_input .city .city_data ul.city_name li:hover{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+
+.search_banner .search_input .time{
+    position: relative;
+}
+.search_banner .search_input .time .date_time{
+    z-index: 2;
+    position: absolute;
+    width: 515px;
+    background: #FFFFFF;
+    border: 1px solid #D3DCE6;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
+    border-radius: 2px;
+    top: 38px;
+    left: 0;
+    display: none;
+}
+.search_banner .search_input .time .date_time .now_month{
+    display: inline-block;
+    width: 258px;
+    border-right: 0.5px solid #E0E6ED;
+    box-sizing: border-box;
+    float: left;
+}
+.search_banner .search_input .time .date_time .next_month{
+    display: inline-block;
+    width: 254px;
+    border-right: 1px solid #E0E6ED;
+    float: right;
+}
+.search_banner .search_input .time .date_time .now_month .header{
+    height: 19px;
+    line-height: 19px;
+    margin-top: 19px;
+    position: relative;
+}
+.search_banner .search_input .time .date_time .now_month .header button{
+    width: 21px;
+    height: 21px;
+    border: none;
+    outline: transparent;
+    float: left;
+}
+.search_banner .search_input .time .date_time .now_month .header button.last_year{
+    background: url("../images/icon_back_year.png");
+    position: absolute;
+    left: 22px;
+}
+.search_banner .search_input .time .date_time .now_month .header button.last_month{
+    background: url("../images/icon_back_month.png");
+    position: absolute;
+    left: 51px;
+}
+.search_banner .search_input .time .date_time .now_month .header .years{
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #475669;
+    display: inline-block;
+    float: right;
+    margin-right: 85px;
+}
+.search_banner .search_input .time .date_time .now_month .week{
+    width: 224px;
+    height: 12px;
+    margin: 23px auto 0 auto;
+}
+.search_banner .search_input .time .date_time .now_month .week li{
+    float: left;
+    width: 32px;
+    font-family: AppleSystemUIFont;
+    font-size: 8px;
+    color: #8492A6;
+    line-height: 12px;
+}
+.search_banner .search_input .time .date_time .now_month .day{
+    width: 224px;
+    margin: 10px auto 0 auto;
+}
+.search_banner .search_input .time .date_time .now_month .day li{
+    float: left;
+    width: 32px;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    color: #475669;
+    line-height: 32px;
+    cursor: pointer;
+}
+.search_banner .search_input .time .date_time .now_month .day li.disable{
+    cursor: default;
+    color: #8492A6;
+}
+.search_banner .search_input .time .date_time .now_month .day li.start{
+    color: #475669;
+    background: #fff;
+}
+.search_banner .search_input .time .date_time .now_month .day li.the_hotel{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+.search_banner .search_input .time .date_time .now_month .day li.leave{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+.search_banner .search_input .time .date_time .next_month .day li.start{
+    color: #475669;
+    background: #fff;
+}
+.search_banner .search_input .time .date_time .next_month .day li.the_hotel{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+.search_banner .search_input .time .date_time .next_month .day li.leave{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+
+
+.search_banner .search_input .time .date_time .next_month .header{
+    height: 19px;
+    line-height: 19px;
+    margin-top: 19px;
+}
+.search_banner .search_input .time .date_time .next_month .header button{
+    width: 21px;
+    height: 21px;
+    border: none;
+    outline: transparent;
+    float: right;
+}
+.search_banner .search_input .time .date_time .next_month .header button.next_year{
+    background: url("../images/icon_back_year.png");
+    transform: rotate(180deg);
+    margin-right: 22px;
+}
+.search_banner .search_input .time .date_time .next_month .header button.next_month{
+    background: url("../images/icon_back_month.png");
+    transform: rotate(180deg);
+    margin-right: 8px;
+}
+.search_banner .search_input .time .date_time .next_month .header .years{
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #475669;
+    display: inline-block;
+    float: left;
+    margin-left: 85px;
+}
+.search_banner .search_input .time .date_time .next_month .week{
+    width: 224px;
+    height: 12px;
+    margin: 23px auto 0 auto;
+}
+.search_banner .search_input .time .date_time .next_month .week li{
+    float: left;
+    width: 32px;
+    font-family: AppleSystemUIFont;
+    font-size: 8px;
+    color: #8492A6;
+    line-height: 12px;
+}
+.search_banner .search_input .time .date_time .next_month .day{
+    width: 224px;
+    margin: 10px auto 0 auto;
+}
+.search_banner .search_input .time .date_time .next_month .day li{
+    float: left;
+    width: 32px;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    color: #475669;
+    line-height: 32px;
+    cursor: pointer;
+}
+.search_banner .search_input .time .date_time .next_month .day li.the_hotel{
+    color: #FFFFFF;
+    background: #5944C3;
+}
+.search_banner .search_input .time .date_time .next_month .day li:first-child{
+    margin-left: 64px;
+}
+.search_banner .search_btn{
+    text-align: center;
+}
+.search_banner .search_btn #search_btn{
+    margin-top: 32px;
+    width: 81px;
+    height: 36px;
+    background: #5944C3;
+    border-radius: 2px;
+    border: none;
+    outline: transparent;
+    font-family: AppleSystemUIFont;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.search_banner .search_btn #search_btn img{
+    vertical-align: middle;
+}
+.hot_hotel{
+    width: 1010px;
+    margin: 17px auto 60px auto;
+} 
+.hot_hotel .hot_hotel_title{
+    width: 100%;
+    height: 32px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #3E3E3E;
+    border-bottom: 3px solid #5944C3;
+    box-sizing: border-box;
+}
+.hot_hotel .hot_hotel_title span{
+    line-height: 13px;
+    float: left;
+}
+.hot_hotel .hot_hotel_title .name{
+    display: inline-block;
+}
+.hot_hotel .hot_hotel_title .name li{
+    float: left;
+    height: 20px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    text-align: center;
+    margin-right: 20.9px;
+    position: relative;
+    cursor: pointer;
+}
+.hot_hotel .hot_hotel_title .name li:first-child{
+    margin-left: 33.5px;
+}
+.hot_hotel .hot_hotel_title .name li .triangle{
+    position: absolute;
+    top: 12px;
+    border: 7px solid transparent;
+    border-bottom: 10px solid #5944C3;
+    display: none;
+}
+.hot_hotel .hot_hotel_title .name li.active .triangle{
+    display: block;
+}
+.hot_hotel .hot_hotel_main{
+    margin-top: 22px;
+}
+.hot_hotel .hot_hotel_main .error{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 512px;
+}
+.hot_hotel .hot_hotel_main li{
+    float: left;
+    margin-right: 43.333333333333336px;
+    margin-bottom: 36px;
+    width: 220px;
+    height: 220px;
+    position: relative;
+}
+.hot_hotel .hot_hotel_main li:nth-child(4),.hot_hotel .hot_hotel_main li:last-child{
+    margin-right:0;
+}
+.hot_hotel .hot_hotel_main li img{
+    width: 220px;
+    height: 220px;
+}
+.hot_hotel .hot_hotel_main li .mask{
+    position: absolute;
+    width: 220px;
+    height: 68px;
+    background: rgba(255,255,255,0.84);
+    bottom: 0;
+}
+.hot_hotel .hot_hotel_main li .mask .name{
+    width: 193.4px;
+    height: 20px;
+    margin: 10px auto 5px auto;
+}
+.hot_hotel .hot_hotel_main li .mask .name span{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    height: 20px;
+}
+.hot_hotel .hot_hotel_main li .mask .name span.hotel_name{
+    float: left;
+    display: inline-block;
+    width: 146px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.hot_hotel .hot_hotel_main li .mask .name span.style{
+    float: right;
+}
+.hot_hotel .hot_hotel_main li .mask .price{
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    color: #FB430A;
+    font-weight: 600;
+    margin-left: 13.305px;
+}

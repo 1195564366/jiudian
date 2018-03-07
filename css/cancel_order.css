@@ -1,0 +1,62 @@
+.main{
+    width: 695px;
+    margin: 93px auto 34px auto;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+    padding-bottom: 44px;
+    box-sizing: border-box;
+    padding-top: 39px;
+}
+.main .title{
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    padding-left: 33px;
+    margin-bottom: 23px;
+}
+.main .single{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    padding-left: 61px;
+}
+.main .order_number{
+    margin-bottom: 21px;
+}
+.main .Hotel_name{
+    margin-bottom: 19px;
+}
+.main .Hotel_name a{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.main .Room_type{
+    margin-bottom: 17px;
+}
+.main .create_time{
+    margin-bottom: 17px;
+}
+.main .check_time{
+    margin-bottom: 24px;
+}
+.main .Guest_name{
+    margin-bottom: 16px;
+}
+#cancel{
+    width: 154px;
+    height: 40px;
+    background: #5944C3;
+    border-radius: 3px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    border: none;
+    outline: transparent;
+    margin: 0 auto 395px auto;
+    display: block;
+}

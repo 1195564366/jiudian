@@ -1,0 +1,193 @@
+.main{
+    width: 1015px;
+    height: 727px;
+    margin: 120px auto 0 auto;
+}
+.nav{
+    width: 1015px;
+    height: 46px;
+    border-bottom: 1px solid #5944C3;
+    box-sizing: border-box;
+    background: #F1F1F1;
+    margin-bottom: 21px;
+}
+.nav li{
+    float: left;
+    width: 106.2px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-family: HiraginoSansGB-W3;
+    font-size: 16px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+.nav li.active{
+    color: #fff;
+    background: #5944C3;
+}
+.search_input{
+    margin-bottom: 51px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.search_input input{
+    width: 158px;
+    height: 34px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    margin-right: 64px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+.search_input input.checkTime{
+    width: 257px;
+    margin-right: 0;
+}
+.search_input #query{
+    float: right;
+    width: 62px;
+    height: 34px;
+    background:  #959595;;
+    border-radius: 3px;
+    border: none;
+    outline: transparent;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+.search_input #query.active{
+    background: #5944C3;
+}
+.Order_details table tr{
+    width: 1015px;
+    display: inline-block;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.Order_details table tr:first-child{
+    width: 1015px;
+    display: inline-block;
+    height: 36px;
+    background: #F1F1F1;
+    border-bottom: none;
+}
+.Order_details table tr:first-child td{
+    height: 36px;
+    line-height: 36px;
+}
+.Order_details table tr td{
+    width: 140px;
+    height: 60px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    display: inline-block;
+    line-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    float: left;
+}
+.Order_details table tr td:first-child{
+    margin-left: 25px;
+    overflow: hidden; /*超出的部分隐藏起来。*/
+    white-space:nowrap;/*不显示的地方用省略号...代替*/
+    text-overflow:ellipsis;/* 支持 IE */
+}
+.Order_details table tr td:nth-child(2) div{
+    line-height: 20px;
+    margin-top: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.Order_details table tr td:nth-child(2) div:last-child{
+    margin-top: 0;
+}
+.Order_details table tr td:last-child a{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #5944C3;
+    letter-spacing: 0;
+}
+.Order_details table tr td button{
+    width: 35px;
+    height:  25px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    background:  #5944C3;
+    color:#fff;
+    border: none;
+    outline: transparent;
+    border-radius: 3px;
+    letter-spacing: 0;
+}
+.Review_page{
+    text-align: center;
+    margin-bottom: 90px;
+}
+.Review_page .Middle>div{
+    outline: transparent;
+    float: left;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #D3DCE6;
+    background: #fff;
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #475669;
+    letter-spacing: 0;
+    line-height:  28px;
+    text-align:  center;
+    box-sizing:  border-box;
+    cursor:  pointer;
+}
+.Review_page button{
+    outline:  transparent;
+    float: left;
+    width: 26px;
+    height: 28px;
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #475669;
+    letter-spacing: 0;
+    line-height: 28px;
+    text-align: center;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #D3DCE6;
+}
+.Review_page button.active{
+    cursor:  pointer;
+}
+.Review_page button.prohibit{
+    color: #D3DCE6;
+    background: #EFF2F7;
+    border: 1px solid #D3DCE6;
+    cursor: default;
+}
+.Review_page .Middle div.active{
+    background: #5944C3;
+    color: #fff;
+}
+.Review_page .Middle{
+    /* text-align:  center; */
+    display: inline-block;
+    margin: 0 auto;
+    /* position: absolute; */
+}

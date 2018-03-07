@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账户设置——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="css/account_settings.css">
+</head>
+<body>
+    <div class="main">
+        <div class="title">账户信息</div>
+        <div class="line"></div>
+        <div class="Head_portrait">
+            <div class="name">头像：</div>
+            <div class="upload">
+                上传头像
+                <!-- <form  enctype="multipart/form-data" id="uploadForm"> -->
+                    <input id="Upload" type="file" name="file" accept="image/*" multiple="multiple">
+                <!-- </form> -->
+            </div>
+        </div>
+        <div class="user_name">
+            <div class="name">
+                昵称：
+            </div>
+            <input type="text" placeholder="请输入昵称" id="UserName" maxlength="32">
+        </div>
+        <div class="user_phone">
+            <div class="name">
+                昵称：
+            </div>
+            <div class="user_phone_number">
+                18725363837
+            </div>
+        </div>
+        <div class="user_phone">
+            <div class="name">
+               微信：
+            </div>
+            <button id="binding" class="active" >绑定</button> 
+            <!-- disabled="disabled" -->
+        </div>
+        <div class="user_password">
+            <div class="name">
+               密码：
+            </div>
+            <span>********</span>
+            <a href="reset.html"></a>
+        </div>
+        <button id="Submit">确定修改</button>
+    </div>
+    <div class="WeChat_mask">
+        <div class="wechat_img">
+            <div class="title">
+                使用微信扫描下方二维码
+            </div>
+            <div class="wechat_img_price">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/account_settings.js"></script>
+</body>
+</html>

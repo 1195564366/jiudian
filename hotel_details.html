@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒店详情——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="css/hotel_details.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=FB46LVseInxLGCjWeHq1zts8CWEitCmq"></script>
+</head>
+<body>
+    <div class="Hotel_head">
+        <div class="Hotel_head_left">
+            <div class="Hotel_head_left_head">
+                <div class="Hotel_name" title="西安开元名都大酒店">
+                    西安开元名都大酒店
+                </div>
+                <div class="Hotel_Star">
+                    <ul>
+                        <li>
+                            <img src="images/icon_star.png" alt="">
+                        </li>
+                        <li>
+                            <img src="images/icon_star.png" alt="">
+                        </li>
+                        <li>
+                            <img src="images/icon_star.png" alt="">
+                        </li>
+                        <li>
+                            <img src="images/icon_star.png" alt="">
+                        </li>
+                        <li>
+                            <img src="images/icon_star.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Hotel_head_left_foot">
+                <div class="Hotel_position">
+                    碑林区友谊东路33号，西藏驻西安办事处家属院内
+                </div>
+                <a href="" class="map_jump">-地图</a>                
+            </div>
+        </div>
+        <div class="Hotel_head_middle">
+            <div class="Hotel_score">
+                <div class="Hotel_score_head"><span>4.9</span>/5分</div>
+                <div class="Hotel_score_foot"><span>1156</span>次点评</div>
+            </div>
+            <div class="Hotel_price">
+                    <span>¥4888</span>起
+            </div>
+        </div>
+        <div class="Hotel_head_right">
+            <img src="images/icon_share.png" alt="">
+            微信
+            <div class="Scan">
+                <div class="Scan_head">
+                    使用微信扫一扫
+                </div>
+                <img src="images/erweima.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="Hotel_photo">
+        <img src="php/images/jiudian.png" alt="" class="big_photo">
+        <ul class="small_photo">
+            <li><img src="images/bg_sign.png" alt=""></li>
+            <li><img src="php/images/jiudian.png" alt=""></li>
+            <li><img src="php/images/jiudian.png" alt=""></li>
+            <li><img src="images/index_banner.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="Skip_navigation_bar">
+        <ul>
+            <li class="active" id="room_Reserve">房型预定</li>
+            <li id="Hotel_xinxi">酒店信息</li>
+            <li id="Traffic_position">交通位置</li>
+            <li id="User_evaluation">用户评价</li>
+        </ul>
+    </div>
+    <div class="Room_type_reservation">
+        <div class="calendar">
+            入住&nbsp;&nbsp;
+            <input type="text" readonly="value" class="Check" placeholder="请选择入住时间">
+            <div class="Check_week"></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            退房&nbsp;&nbsp;
+            <input type="text" readonly="value" class="Check_out" placeholder="请选择退房时间">
+            <div class="Check_out_week"></div>
+            <div class="Statistics">
+                
+            </div>
+            <button type="button" class="Inquire_room active" >查询</button>
+            <div class="Check_calendar calendar_time">
+                <div class="header">
+                    <button class="last_year"></button>
+                    <button class="last_month"></button>
+                    <div class="years">
+                        <span class="year"></span>年&nbsp;<span class="month"></span>月
+                    </div>
+                    <button class="next_year"></button>
+                    <button class="next_month"></button>
+                </div>
+                <div class="week">
+                    <ul>
+                        <li>日</li>
+                        <li>一</li>
+                        <li>二</li>
+                        <li>三</li>
+                        <li>四</li>
+                        <li>五</li>
+                        <li>六</li>
+                    </ul>
+                </div>
+                <div class="day">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="Check_out_calendar calendar_time">
+                <div class="header">
+                    <button class="last_year"></button>
+                    <button class="last_month"></button>
+                    <div class="years">
+                        <span class="year"></span>年&nbsp;<span class="month"></span>月
+                    </div>
+                    <button class="next_year"></button>
+                    <button class="next_month"></button>
+                </div>
+                <div class="week">
+                    <ul>
+                        <li>日</li>
+                        <li>一</li>
+                        <li>二</li>
+                        <li>三</li>
+                        <li>四</li>
+                        <li>五</li>
+                        <li>六</li>
+                    </ul>
+                </div>
+                <div class="day">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Details_of_the_house_type">   
+        </div>
+    </div>
+    <div class="Hotel_information">
+        <div class="title">酒店介绍</div>
+        <div class="History_of_development">
+            <div>2007年开业</div>
+            <div>2007年开业</div>
+            <div>2007年开业</div>
+            <div>2007年开业</div>
+        </div>
+        <div class="Hotel_Introduction">
+         西安开元名都大酒店座落于西安市高新技术产业开发区腹地，毗邻市内最具规模的商业区及高级娱乐购物区。诸多著名的旅游名胜，包括秦始皇兵马俑及西安古城墙都可从酒店轻松到达。 酒店拥有各类设计独特的豪华客房及套房，客房别具气势的落地式长窗，让您饱览城市如画的风光和酒店的园林景致。酒店的四间风格迥异的餐厅和酒吧，让您可享受到来自各地颇富盛名的厨师们亲自为您烹饪的诱人美食。
+        </div>
+        <div class="title">酒店设施</div>
+        <div class="Hotel_facilities">
+            <div class="integrated">
+                <div class="title">
+                    综合设施
+                </div>
+            </div>
+            <div class="room">
+                <div class="title">
+                    客房设施
+                </div>
+            </div>
+            <div class="Service_Items">
+                <div class="title">
+                    服务项目
+                </div> 
+            </div>
+            <div class="activity">
+                <div class="title">
+                    活动设施
+                </div>
+            </div>
+        </div>
+        <div class="title">酒店政策</div>
+        <div class="hotel_policy">
+            <div class="time">
+                <div class="title">
+                    入店和离店
+                </div>
+                <div class="entry_time">
+                    入店时间：<span></span>
+                </div>
+                <div class="departure_time">
+                    离店时间：<span></span>
+                </div>
+            </div>
+            <div>
+                <div class="title">儿童政策</div>
+                <div class="child_policy"></div>
+            </div>
+            <div>
+                <div class="title">宠物</div>
+                <div class="pet_policy"></div>
+            </div>
+        </div>
+    </div>
+    <div class="Hotel_map">
+        <div class="title">交通位置</div>
+        <div class="map" id="container">
+
+        </div>
+    </div>
+    <div class="User_evaluation">
+        <div class="title">
+            用户评价
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="active" id="all">全部</li>
+                <li id="good">好评</li>
+                <li id="bad">差评</li>
+                <li id="photo">有图</li>
+            </ul>
+        </div>
+        <div class="evaluate">
+        </div>
+        <div class="Review_page">
+            <div class="Middle">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/moment.js/2.20.1/moment.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/hotel_details.js"></script>
+</body>
+</html>

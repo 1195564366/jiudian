@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单评价——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="css/evaluate.css">
+</head>
+<body>
+    <div class="main">
+        <img src="php/images/jiudian.png" alt="" class="Hotel_price">
+        <div class="main_right">
+            <div class="Hotel_name">
+                西安开元名都大酒店
+            </div>
+            <div class="Room_name">
+                豪华大床房
+            </div>
+            <div class="Room_price">
+                ¥<span>788</span>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="evaluate">
+            总体评价：
+            <ul>
+                <li class="start1"><img src="images/icon_star_no.png" alt=""></li>
+                <li class="start2"><img src="images/icon_star_no.png" alt=""></li>
+                <li class="start3"><img src="images/icon_star_no.png" alt=""></li>
+                <li class="start4"><img src="images/icon_star_no.png" alt=""></li>
+                <li class="start5"><img src="images/icon_star_no.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="the_sun">
+            评价晒单：
+            <textarea class="evaluation_content" placeholder="酒店是否给力，快来分享你的入住体验吧~"></textarea>
+            <div class="clear"></div>
+        </div>
+        <div class="Upload_photos">
+            <div class="container">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="Choose_photo">      
+                        <img src="images/icon_photo.png" alt="">
+                        <input id="Upload" type="file" name="file" accept="image/*" multiple="multiple">
+                    </div> 
+                </form>
+            </div>
+            <div class="Hint">
+                最多上传10张照片哦
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="submit">
+        <button id="submit" disabled="disabled">提交</button>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/evaluate.js"></script>
+</body>
+</html>

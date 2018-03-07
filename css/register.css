@@ -1,0 +1,131 @@
+main{
+    max-width: 100%;
+    height:591px;
+    padding-top: 66px;
+    background: url("../images/bg_sign.png") no-repeat;
+    background-size: 100% 100%;
+}
+main .register{
+    width: 753px;
+    height:525px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    padding-top: 31px;
+}
+main .register .title{
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 33px;
+}
+main .register ul li{
+    text-align: center;
+    /* margin-bottom: 21px; */
+    width: 394px;
+    margin: 0 auto 21px auto;
+}
+main .register ul li input{
+    width: 379px;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    padding-left: 13px;
+
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+main .register ul li input:focus{
+    border: 1px solid #5944C3;
+}
+main .register ul li input::-moz-placeholder{
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+
+main .register ul li input.img_yzm{
+    width: 262px;
+    margin-right: 12px;
+}
+main .register ul li input.yzm{
+    width: 136.2px;
+    margin-right: 12px;
+}
+main .register ul li button.submit_yzm{
+    width: 105px;
+    height: 40px;
+    background: #5944C3;
+    border-radius: 3px;
+    border: none;
+
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    cursor: pointer;
+    outline: transparent;
+    margin-right: 12px;
+}
+main .register ul li button.see_yzm{
+    width: 105px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    border: none;
+
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    cursor: pointer;
+    outline: transparent;
+}
+main .register ul li .submit_register{
+    width: 394px;
+    height: 40px;
+    cursor: pointer;
+    background: rgba(0,0,0,.35);
+    border-radius: 3px;
+    border: none;
+    outline: transparent;
+
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-bottom: 5px;
+}
+main .register .switch{
+    width: 379px;
+    height: 30px;
+    margin: 21px auto 0 auto;
+    line-height: 30px;
+}
+main .register .switch span{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .register .switch a{
+    display: inline-block;
+    width: 75px;
+    height: 30px;
+    background: #5944C3;
+    border-radius: 3px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 30px;
+    float: right;
+}

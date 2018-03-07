@@ -1,0 +1,124 @@
+.main{
+    width: 875px;
+    margin: 210px auto 205px auto;
+    box-sizing:  border-box;
+}
+.title{
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #222629;
+    letter-spacing: 0; 
+    margin-bottom: 30px;
+}
+.Order_details{
+    width: 875px;
+    height: 205px;
+    padding: 27px 32.6px 23px 28px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+}
+.Order_details img{
+    width: 230px;
+    height: 155px;
+}
+.Order_details .Order_details_right{
+    display: inline-block;
+    width: 569.4px;
+    float: right;
+    height: 50px;
+    padding-top: 49px;
+}
+
+.Order_details .Order_details_right .Hotel_name{
+    font-family: HiraginoSansGB-W6;
+    font-size: 16px;
+    color: #3E3E3E;
+    font-weight: bold;
+}
+
+.Order_details .Order_details_right .price .room_name{
+    float: left;
+    margin-top: 13px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222629;
+    letter-spacing: 0;
+}
+.Order_details .Order_details_right .price .room_price{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222629;
+    letter-spacing: 0;
+}
+.Order_details .Order_details_right .price .room_price span{
+    font-family: HiraginoSansGB-W6;
+    font-size: 18px;
+    color: #FC4209;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: bold;
+}
+.payment{
+    width: 875px;
+    height: 205px;
+    padding-top: 18px;
+    padding-left: 31px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+    margin-bottom: 39px;
+}
+.payment .title{
+    font-family: ArialMT;
+    font-size: 14px;
+    color: #222629;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+}
+.payment .Payment_method>div{
+    display: inline-block;
+    width: 175px;
+    height: 70px;
+    padding: 9px 11.5px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.payment .Payment_method>div.Alipay{
+    margin-right: 30px;
+}
+.price_text{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    text-align: right;
+    margin-bottom: 25px;
+}
+.price_text span{
+    font-family: HiraginoSansGB-W6;
+    font-size: 18px;
+    color: #FC4209;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: bold;
+}
+#pay{
+    width: 113px;
+    height: 36px;
+    border: none;
+    outline: transparent;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    float: right;
+}
+#pay.active{
+    background: #5944C3;
+}

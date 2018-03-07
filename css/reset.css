@@ -1,0 +1,189 @@
+main{
+    max-width: 100%;
+    height:533px;
+    padding-top: 64px;
+    background: url("../images/bg_sign.png") no-repeat;
+    background-size: 100% 100%;
+}
+main .reset{
+    width: 753px;
+    height: 465px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    padding-top: 36px;
+}
+main .reset .title{
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 52px;
+}
+main .reset .step{
+    width: 566px;
+    height: 42px;
+    margin: 0 auto;
+}
+main .reset .step ul li{
+    float: left;
+    width: 33.33333333%;
+    height: 42px;
+    border-top: 3px solid rgba(0, 0, 0, .15);
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 60px;
+    box-sizing: border-box;
+    position: relative;
+
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W6;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .reset .step ul li .circular{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: #C6C6C6;
+    border-radius: 50%;
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 28px;
+    top: -16px;
+    left: 80px;
+}
+main .reset .step ul li.verification{
+    color: #5944C3;
+    opacity: 1;
+    border-top: 3px solid #5944C3;
+}
+main .reset .step ul li.verification .circular{
+    background: #5944C3;
+}
+
+
+main .reset .verification_information{
+    margin-top: 43px;
+    display: block;
+}
+main .reset .verification_information ul li{
+    width: 379px;
+    margin: 0 auto 21px auto;;
+}
+main .reset .verification_information ul li:nth-child(3){
+    margin-bottom: 30px;
+}
+main .reset .verification_information ul li input{
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+main .reset .verification_information ul li input:focus{
+    border: 1px solid #5944C3;
+}
+main .reset .verification_information ul li input.phone{
+    width: 379px;
+}
+main .reset .verification_information ul li input.img_yzm{
+    width: 262px;
+}
+main .reset .verification_information ul li input.yzm{
+    width: 138.2px;
+    margin-right: 11px;
+}
+main .reset .verification_information ul li button{
+    width: 105px;
+    height: 40px;
+    outline: transparent;
+    border: none;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.35);
+}
+main .reset .verification_information ul li button.submit_yzm{
+    background: #5944C3;
+    margin-right: 11px;
+}
+main .reset .verification_information ul li input::-moz-placeholder{
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .reset .verification_information ul li button.next_step{
+    width: 379px;
+    height: 40px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+
+main .reset .reset_pwd_information{
+    display: none;
+    margin-top: 65px;
+}
+main .reset .reset_pwd_information ul li{
+    text-align: center;
+    margin-bottom: 24px;
+}
+main .reset .reset_pwd_information ul li input{
+    width: 379px;
+    height: 40px;
+    padding-left: 13px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 3px;
+
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    box-sizing: border-box;
+}
+main .reset .reset_pwd_information ul li input::-moz-placeholder{
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .reset .reset_pwd_information ul li button.next_step{
+    width: 379px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    outline: transparent;
+    border: none;
+
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+main .reset .success_information{
+    display: none;
+    text-align: center;
+    line-height: 250px;
+    font-size: 25px;
+}
+main .reset .success_information a{
+    color: green;
+}

@@ -1,0 +1,220 @@
+main{
+    max-width: 100%;
+    height:531px;
+    padding-top: 66px;
+    background: url("../images/bg_sign.png") no-repeat;
+    background-size: 100% 100%;
+}
+main .login{
+    width: 449px;
+    height:465px;
+    background: #FFFFFF;
+    float: right;
+    margin-right: 15%;
+}
+main .login .nav ul li{
+    float: left;
+    width: 50%;
+    height:48px;
+    text-align: center;
+    line-height: 48px;
+    background: #CFC8F4;
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    cursor: pointer;
+    position: relative;
+}
+main .login .nav ul li div{
+    display: none;
+}
+main .login .nav ul li.active{
+    background: #5944C3;
+    color: #FFFFFF;
+}
+main .login .nav ul li.active div{
+    display: inline-block;
+    border: 9px solid transparent;
+    border-top: 9px solid  #5944C3;
+    margin:  0 auto;
+    position: absolute;
+    top:48px;
+    left:107.75px;
+}
+main .login .account_login{
+    margin-top: 115px;
+}
+main .login .account_login ul li{
+    text-align: center;
+    position: relative;
+
+}
+main .login .account_login ul li input{
+    width: 379px;
+    height:40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    padding-left: 37px;
+    box-sizing: border-box;
+}
+main .login .account_login ul li input:focus{
+    border: 1px solid #5944C3;
+}
+main .login .account_login ul li input::-moz-placeholder{
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .login .account_login ul li:first-child img,main .login .account_login ul li:nth-child(2) img{
+    position:absolute;
+    top: 10px;
+    left: 47px;
+}
+
+main .login .account_login ul li:first-child{
+    margin-bottom: 25px;
+}
+main .login .account_login ul li:nth-child(2){
+    margin-bottom: 21px;
+}
+main .login .account_login ul li:nth-child(3){
+    margin-bottom: 15px;
+}
+main .login .account_login ul li:last-child{
+    margin-bottom: 57px;
+}
+main .login .account_login ul li a{
+    float: right;
+    margin-right: 30px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .login .account_login ul li button{
+    width: 379px;
+    height: 40px;
+    border: none;
+    outline: transparent;
+    background: rgba(0,0,0,.35);
+    border-radius: 3px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+.switch{
+    width: 379px;
+    height: 30px;
+    margin: 33px auto 0 auto;
+    line-height: 30px;
+}
+.switch span{
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.switch a{
+    display: inline-block;
+    width: 75px;
+    height: 30px;
+    background: #5944C3;
+    border-radius: 3px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 30px;
+    float: right;
+}
+main .login .SMS_login{
+    display: none;
+    margin-top: 95px;
+}
+main .login .SMS_login ul li{
+    text-align: center;
+    width: 379px;
+    margin: 0 auto 21px auto;
+}
+main .login .SMS_login ul li input{
+    height: 40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+main .login .SMS_login ul li input:focus{
+    border: 1px solid #5944C3;
+}
+main .login .SMS_login ul li input::-moz-placeholder{
+    opacity: 0.7;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+main .login .SMS_login ul li:first-child input{
+    width: 379px;
+}
+main .login .SMS_login ul li:nth-child(2) input{
+    width: 262px;
+    margin-right: 12px;
+}
+main .login .SMS_login ul li:nth-child(3) input{
+    width: 138.2px;
+    margin-right: 11px;
+}
+main .login .SMS_login ul li:nth-child(3) button{
+    width: 105px;
+    height: 40px;
+    border:none;
+    outline: transparent;
+
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+main .login .SMS_login ul li:nth-child(3) button.submit_yzm{
+    background: #5944C3;
+    border-radius: 3px;
+    margin-right: 11px;
+}
+main .login .SMS_login ul li:nth-child(3) button.see_yzm{
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+}
+main .login .SMS_login ul li:nth-child(3){
+    margin-bottom: 33px;
+}
+main .login .SMS_login ul li:last-child{
+    margin-bottom: 44px;
+}
+main .login .SMS_login ul li:last-child button{
+    width: 379px;
+    height:40px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    border:none;
+    outline: transparent;
+    font-family: HiraginoSansGB-W3;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}

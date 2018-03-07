@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的订单——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="css/my_order.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <ul>
+                <li class="active" id="all">全部订单</li>
+                <li id="wait">待付款</li>
+                <li id="Reserve">预定中</li>
+                <li id="complete">已完成</li>
+                <li id="cancel">已取消</li>
+            </ul>
+        </div>
+        <div class="search_input">
+            订单号：<input type="text" class="orderNo">
+            旅客：<input type="text" class="customerName">
+            预定时间段：<input type="text" class="checkTime">
+            <button id="query" disabled="disabled">查询</button>
+        </div>
+        <div class="Order_details">
+        </div>    
+    </div>
+    <div class="Review_page">
+        <div class="Middle">
+
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/my_order.js"></script>
+</body>
+</html>

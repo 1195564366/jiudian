@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页——APIS酒店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="search_banner">
+        <div class="search_input">
+            <div class="city">
+                <input type="text" placeholder="请选择城市" class="city_input">
+                <div class="city_data">
+                    <ul class="title">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="time">
+                <input type="text" placeholder="请选择日期" class="time_input" readonly="value">
+                <div class="date_time">
+                    <div class="now_month">
+                        <div class="header">
+                            <button class="last_year"></button>
+                            <button class="last_month"></button>
+                            <div class="years">
+                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                            </div>
+                        </div>
+                        <div class="week">
+                            <ul>
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                        </div>
+                        <div class="day">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="next_month">
+                        <div class="header">
+                            <button class="next_year"></button>
+                            <button class="next_month"></button>
+                            <div class="years">
+                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                            </div>
+                        </div>
+                        <div class="week">
+                            <ul>
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                        </div>
+                        <div class="day">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="text" placeholder="酒店名称/位置/关键字" class="hotelKeyword">
+            </div>
+        </div>
+        <div class="search_btn">
+            <button id="search_btn">
+                <img src="images/search.png" alt="">
+                搜索
+            </button>
+        </div>
+    </div>
+    <div class="hot_hotel">
+        <div class="hot_hotel_title">
+            <span>热门城市</span>
+            <ul class="name">
+            </ul>
+        </div>
+        <div class="hot_hotel_main">
+            <ul>
+                
+            </ul>
+            
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/banner_search.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
