@@ -126,7 +126,7 @@ $(".submit_register").click(function(){ //提交注册数据
 $(document).ready(function(){
     register_header();
     register_footer();
-    // Gvc($(".graphical_yzm"));
+    Gvc($(".graphical_yzm"));
 })
 
 
