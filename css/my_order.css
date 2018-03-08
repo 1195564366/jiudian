@@ -191,3 +191,10 @@
     margin: 0 auto;
     /* position: absolute; */
 }
+.Order_details .error{
+    text-align: center;
+    font-family: HiraginoSansGB-W3;
+    font-size: 16px;
+    color: red;
+    letter-spacing: 0;
+}

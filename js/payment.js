@@ -33,7 +33,8 @@ function add_content(){ //动态添加页面跳转来的内容
 $("#pay").click(function(){     //立即支付请求
     var token = localStorage.token;
     if( payType == "" ){
-        alert("请先选择支付方式");
+        $(".modal-body p").html( "请先选择支付方式" );
+        $('#myModal').modal('show');
         return;
     }
     $.ajax({
@@ -52,20 +53,23 @@ $("#pay").click(function(){     //立即支付请求
     .done(function(data){
         console.log(data)
         if( data.code == "success" ){
-            alert("支付成功,点击后回到首页");
-            window.location.href = "index.html";
+            $(".modal-body p").html( '支付成功,<a href="index.html">点击后回到首页</a>' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "account_token_invalid" ){
-            alert( "身份已失效,请重新登陆" )
+            $(".modal-body p").html( '身份已失效,请重新登陆,<a href="login.html">点击后跳转登陆页面</a>' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "order_not_found" ){
-            alert( "订单不存在,请重新下单" )
+            $(".modal-body p").html( '订单不存在,请重新下单' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "order_pay_fail" ){
-            alert( "订单支付失败,请重新支付" )
+            $(".modal-body p").html( '订单支付失败,请重新支付' );
+            $('#myModal').modal('show');
             return;
         }
     })

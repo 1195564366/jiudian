@@ -60,19 +60,23 @@ function see_yzm(phone,type){   //查看短信验证码
             SMS_yzm_storage = data.data.smsCaptcha;
             console.log("短信验证码为："+ data.data.smsCaptcha);
             yzm = data.data.smsCaptcha;
-            alert("短信验证码为："+data.data.smsCaptcha);
+            $(".modal-body p").html( "短信验证码为："+data.data.smsCaptcha );
+            $('#myModal').modal('show');
             return;
         }
         if(data.code == "param_incomplete"){
-            alert("请输入手机号码");
+            $(".modal-body p").html( "请输入手机号码" );
+            $('#myModal').modal('show');
             return;
         }
         if(data.code == "phone_format_error"){
-            alert("手机号码格式不正确");
+            $(".modal-body p").html( "手机号码格式不正确" );
+            $('#myModal').modal('show');
             return;
         }
         if(data.code == "sms_captcha_not_found"){
-            alert("短信验证码不存在,请重新获取");
+            $(".modal-body p").html( "短信验证码不存在,请重新获取" );
+            $('#myModal').modal('show');
             return;
         }
     })
@@ -131,28 +135,34 @@ function Sac(phone,type,imgCaptcha,obtain,see){ //获取短信验证码
         if( data.code == "success"){
             SMS_yzm_storage = data.data.smsCaptcha;
             console.log("短信验证码为:"+data.data.smsCaptcha);
-            alert("短信验证码为:"+data.data.smsCaptcha);
+            $(".modal-body p").html( "短信验证码为:"+data.data.smsCaptcha );
+            $('#myModal').modal('show');
             timer(obtain,see,300);
             return
         }
         if( data.code == "param_incomplete"){
-            alert("请查看手机号码或图文验证码是否输入");
+            $(".modal-body p").html( "请查看手机号码或图文验证码是否输入" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "phone_format_error"){
-            alert("手机号码格式有误,请仔细查看");
+            $(".modal-body p").html( "手机号码格式有误,请仔细查看" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "captcha_fail"){
-            alert("图文验证码错误,请刷新图文验证码");
+            $(".modal-body p").html( "图文验证码错误,请刷新图文验证码" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "account_has_registered"){
-            alert("该手机号码已被注册");
+            $(".modal-body p").html( "该手机号码已被注册" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "sms_captcha_has_sent"){
-            alert("验证码已经发送,请5分钟后再试");
+            $(".modal-body p").html( "验证码已经发送,请5分钟后再试" );
+            $('#myModal').modal('show');
             timer(obtain,see,300);
             return
         } 
@@ -278,6 +288,28 @@ function register_header(){
     `
     $("body").prepend(str_header);
     console.log("页面顶部加载成功");
+}
+function modal(){
+    var str = `
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+            <p>温馨提示</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    `
+    $("body").append(str);
+    console.log("模态框加载成功");
 }
 function register_footer(){
     var str_footer = `

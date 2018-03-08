@@ -46,21 +46,23 @@ $("#cancel").click(function(){
     })
     .done(function(data){
         if( data.code == "success" ){
-            alert("取消订单成功,点击后返回我的订单页面");
-            window.location.href = "my_order.html";
+            $(".modal-body p").html( '取消订单成功,<a href="my_order.html">点击后返回我的订单页面</a>' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "account_token_invalid" ){
-            alert("身份已失效,请重新登陆,点击后返回登陆页面");
-            window.location.href = "login.html";
+            $(".modal-body p").html( '身份已失效,请重新登陆,<a href="login.html">点击后返回登陆页面</a>' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "order_not_found" ){
-            alert("订单不存在");
+            $(".modal-body p").html( '订单不存在' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "order_cancel_fail" ){
-            alert("订单取消失败,请重新取消");
+            $(".modal-body p").html( '订单取消失败,请重新取消' );
+            $('#myModal').modal('show');
         }
         
     })

@@ -17,15 +17,9 @@ $.ajax({
             $(".upload").css("background","url("+ url_img + user_data.avatar +")");
             $(".upload").css("background-size","100% 100%");
         }
+        $(".user_head_img").attr("src",url_img + user_data.avatar);
         $("#UserName").val( user_data.name );
         $(".user_phone_number").html( user_data.phone );
-        // if( user_data.weipayId == "false"){
-        //     $("#binding").addClass("active");
-        //     $("#binding").attr("disabled",false);
-        // }else if( user_data.weipayId == "true"){
-        //     $("#binding").removeClass("active");
-        //     $("#binding").attr("disabled",true);
-        // }
     }
 })
 var avatarPath = ""
@@ -66,11 +60,13 @@ $("#Upload").change(function(){
             return;
         }
         if( data.code == "account_token_invalid" ){
-            alert("身份已失效,请重新登陆");
+            $(".modal-body p").html( '身份已失效,请重新登陆,<a href="login.html">点击跳转登陆页面</a>' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "image_create_fail" ){
-            alert("头像上传失败,请重新上传");
+            $(".modal-body p").html( '头像上传失败,请重新上传' );
+            $('#myModal').modal('show');
             return;
         }
     })
@@ -94,23 +90,32 @@ $("#Submit").click(function(){
     .done(function(data){
         console.log( data );
         if( data.code == "success" ){
-            alert("修改成功,请重新登陆,查看修改后内容");
+            $(".modal-body p").html( '修改成功,3秒后页面将自动刷新后可查看修改内容' );
+            $('#myModal').modal('show');
+            setTimeout(function(){
+                location.reload();
+            },3000)
             return;
         }
         if( data.code == "name_format_error" ){
-            alert("用户名格式错误");
+            $(".modal-body p").html( '用户名格式错误' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "account_token_invalid" ){
-            alert("身份已失效,请重新登陆");
+            $(".modal-body p").html( '身份已失效,请重新登陆,<a href="login.html">跳转登陆页面</a>' );
+            $('#myModal').modal('show');
+            
             return;
         }
         if( data.code == "account_detail_change_fail" ){
-            alert("修改失败");
+            $(".modal-body p").html( '修改失败' );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "account_not_found" ){
-            alert("用户不存在");
+            $(".modal-body p").html( '用户不存在' );
+            $('#myModal').modal('show');
             return;
         }
     })

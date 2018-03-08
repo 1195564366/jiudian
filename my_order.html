@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/public_style.css">
     <link rel="stylesheet" href="css/my_order.css">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
 </head>
 <body>
     <div class="main">
@@ -21,7 +22,7 @@
             </ul>
         </div>
         <div class="search_input">
-            订单号：<input type="text" class="orderNo">
+            订单号：<input type="text" class="orderNo" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
             旅客：<input type="text" class="customerName">
             预定时间段：<input type="text" class="checkTime">
             <button id="query" disabled="disabled">查询</button>
@@ -38,5 +39,6 @@
     <script src="js/url.js"></script>
     <script src="js/common.js"></script>
     <script src="js/my_order.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
 </body>
 </html>

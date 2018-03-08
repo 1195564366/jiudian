@@ -84,40 +84,48 @@ $(".submit_register").click(function(){ //提交注册数据
         function(data){
             console.log(data);
            if(data.code == "success"){
-               alert("注册成功,即将跳转到登陆页面");
-               window.location.href="login.html";
-               return;
+                $(".modal-body p").html( '注册成功,<a href="login.html">跳转到登陆页面</a>' );
+                $('#myModal').modal('show');
+                return;
            }
            if(data.code == "param_incomplete"){
-                alert("注册信息输入不完整");
+                $(".modal-body p").html( '注册信息输入不完整' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "phone_format_error"){
-                alert("手机号码格式不正确");
+                $(".modal-body p").html( '手机号码格式不正确' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "password_format_error"){
-                alert("密码格式不正确");
+                $(".modal-body p").html( '密码格式不正确' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "sms_captcha_not_found"){
-                alert("短信验证码不存在,请重新获取");
+                $(".modal-body p").html( '短信验证码不存在,请重新获取' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "sms_captcha_illegal"){
-                alert("非法短信验证码,请重新获取");
+                $(".modal-body p").html( '非法短信验证码,请重新获取' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "sms_captcha_fail"){
-                alert("短信验证码错误,请重新获取");
+                $(".modal-body p").html( '短信验证码错误,请重新获取' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "phone_has_registered"){
-                alert("该手机号码已被注册");
+                $(".modal-body p").html( '该手机号码已被注册' );
+                $('#myModal').modal('show');
                 return;
             }
             if(data.code == "account_create_fail"){
-                alert("注册失败,请重新注册");
+                $(".modal-body p").html( '注册失败,请重新注册' );
+                $('#myModal').modal('show');
                 return;
             }
         }
@@ -125,6 +133,7 @@ $(".submit_register").click(function(){ //提交注册数据
 })
 $(document).ready(function(){
     register_header();
+    modal();
     register_footer();
     Gvc($(".graphical_yzm"));
 })

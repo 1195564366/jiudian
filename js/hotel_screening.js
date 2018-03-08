@@ -123,7 +123,9 @@ $(".Administrative_area").click(function(){     //行政区点击事件
     var html = $(this).find(".name").html();
 
     if( $(".city_input").val().length == 0){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
         return;
     }
     
@@ -182,7 +184,10 @@ $(".Administrative_area").click(function(){     //行政区点击事件
                     Administrative_area_data_existence = 1;
                 }else{
                     Administrative_area_data_existence = 2;
-                    alert("该城市暂无"+ html +"数据");
+                    
+                    // alert("该城市暂无"+ html +"数据");
+                    $(".modal-body p").html( "该城市暂无"+ html +"数据" );
+                    $('#myModal').modal('show');
                     return;
                 }
             })
@@ -228,7 +233,9 @@ $(".trading_area").click(function(){
     var html = $(this).find(".name").html();
 
     if( $(".city_input").val().length == 0){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
         return;
     }
 
@@ -287,7 +294,9 @@ $(".trading_area").click(function(){
                     trading_area_data_existence = 1;
                 }else{
                     trading_area_data_existence = 2;
-                    alert("该城市暂无"+ html +"数据");
+                    // alert("该城市暂无"+ html +"数据");
+                    $(".modal-body p").html( "该城市暂无"+ html +"数据" );
+                    $('#myModal').modal('show');
                     return;
                 }
             })
@@ -332,7 +341,9 @@ $(".Metro_station").click(function(){
     var html = $(this).find(".name").html();
 
     if( $(".city_input").val().length == 0){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
         return;
     }
 
@@ -407,7 +418,9 @@ $(".Metro_station").click(function(){
                     Metro_station_data_existence =1;
                 }else{
                     Metro_station_data_existence = 2;
-                    alert("该城市暂无"+ html +"数据");
+                    // alert("该城市暂无"+ html +"数据");
+                    $(".modal-body p").html( "该城市暂无"+ html +"数据" );
+                    $('#myModal').modal('show');
                 }
             })
         }
@@ -464,7 +477,9 @@ $(".Station").click(function(){
     var html = $(this).find(".name").html();
 
     if( $(".city_input").val().length == 0){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
         return;
     }
 
@@ -556,7 +571,9 @@ $(".Station").click(function(){
                     Station_data_existence = 1;
                 }else{
                     Station_data_existence = 2;
-                    alert("该城市暂无"+ html +"数据");
+                    // alert("该城市暂无"+ html +"数据");
+                    $(".modal-body p").html( "该城市暂无"+ html +"数据" );
+                    $('#myModal').modal('show');
                 }
             })
         } 
@@ -600,7 +617,9 @@ $(".Scenic_spot").click(function(){     //景点点击事件
     
     var html = $(this).find(".name").html();
     if( $(".city_input").val().length == 0){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
         return;
     }
 
@@ -659,7 +678,9 @@ $(".Scenic_spot").click(function(){     //景点点击事件
                     Scenic_spot_data_existence = 1;
                 }else{
                     Scenic_spot_data_existence = 2;
-                    alert("该城市暂无"+ html +"数据");
+                    // alert("该城市暂无"+ html +"数据");
+                    $(".modal-body p").html( "该城市暂无"+ html +"数据" );
+                    $('#myModal').modal('show');
                 }
             })
         }
@@ -798,7 +819,9 @@ $(".Custom_price input").keyup(function(){
 })
 $(".Custom_price button").click(function(){
     if( $(".Custom_price input.Upper_limit").val() <= $(".Custom_price input.lower_limit").val() ){
-        alert("价格上限不能小于或等于价格下限");
+        // alert("价格上限不能小于或等于价格下限");
+        $(".modal-body p").html( "价格上限不能小于或等于价格下限" );
+        $('#myModal').modal('show');
         return;
     }
     if( $(".Custom_price input.Upper_limit").val() > $(".Custom_price input.lower_limit").val() ){
@@ -968,7 +991,9 @@ $(".brand .unlimited").click(function(){
 })
 //酒店更多点击事件
 $(".brand .More").click(function(){
-    alert("暂无数据");
+    // alert("暂无数据");
+    $(".modal-body p").html( "正在上线中" );
+    $('#myModal').modal('show');
 })
 
 var count = ""  //用来记录酒店数量
@@ -1010,15 +1035,7 @@ function Jump_execution(page){// 首页跳转过来执行方法
                 
                 var star_level = "";    //保存星级图标个数
                 var star_level_str = "";//保存星级图标
-                var map_str_1 = ""
                 for(i=0;i<Hotel_data.length;i++){
-
-                    map_str_1 +=`
-                    {
-                        name: '`+ Hotel_data[i].name +`',
-                        location: new BMap.Point(`+ Hotel_data[i].location.lng +`, `+ Hotel_data[i].location.lat +`)
-                    },
-                    `
                     star_level = Hotel_data[i].star_level;
                     for(a=0; a<star_level; a++){
                         star_level_str += '<li><img src="images/icon_star.png" alt=""></li>';
@@ -1061,20 +1078,37 @@ function Jump_execution(page){// 首页跳转过来执行方法
                     `
                     star_level_str = "";
                 }
-                map_str_1 = map_str_1.substring(0,map_str_1.lastIndexOf(','));
                 
-                var map_str = ` 
-                <script type="text/javascript" class="map_container">
+                
+                
                     const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
-                    map.centerAndZoom(new BMap.Point(`+ Hotel_data[0].location.lng +`, `+ Hotel_data[0].location.lat +`), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng , Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
                     map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
                     map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
                     map.addControl(new BMap.NavigationControl({
                     type: BMAP_NAVIGATION_CONTROL_ZOOM
                     })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
-                    const hotelDataArry = [`
-                    + map_str_1 +
-                    `
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        },
+                        {
+                            name: Hotel_data[2].name ,
+                            location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                        },
+                        {
+                            name: Hotel_data[3].name ,
+                            location: new BMap.Point( Hotel_data[3].location.lng , Hotel_data[3].location.lat )
+                        },
+                        {
+                            name: Hotel_data[4].name ,
+                            location: new BMap.Point( Hotel_data[4].location.lng , Hotel_data[4].location.lat )
+                        }
                     ]
                     hotelDataArry.forEach(el => {
                     const marker = new BMap.Marker(el.location) // 创建标注点
@@ -1083,13 +1117,12 @@ function Jump_execution(page){// 首页跳转过来执行方法
                         offset: new BMap.Size(20)
                     })) // 向标注点添加标注文本
                     })
-                </script>
-                `
                 
-                $("#container").append( map_str );
+                
                 $(".Hotel_information").append(str);
             }else{
-                alert("暂无酒店信息");
+                $(".modal-body p").html( "暂无酒店信息" );
+                $('#myModal').modal('show');
             }
         })
     }
@@ -1133,7 +1166,9 @@ var distance = "";
 // 搜索按钮点击事件
 $("#search_btn").click(function(){
     if( $(".city_input").val().length == 0 ){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
     }else{
         page_btn = 2;
         Request_city_data_judge = 1;
@@ -1222,15 +1257,7 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
             
             var star_level = "";    //保存星级图标个数
             var star_level_str = "";//保存星级图标
-            var map_str_1 = ""
             for(i=0;i<Hotel_data.length;i++){
-
-                map_str_1 +=`
-                {
-                    name: '`+ Hotel_data[i].name +`',
-                    location: new BMap.Point(`+ Hotel_data[i].location.lng +`, `+ Hotel_data[i].location.lat +`)
-                },
-                `
                 star_level = Hotel_data[i].star_level;
                 for(a=0; a<star_level; a++){
                     star_level_str += '<li><img src="images/icon_star.png" alt=""></li>';
@@ -1273,20 +1300,35 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
                 `
                 star_level_str = "";
             }
-            map_str_1 = map_str_1.substring(0,map_str_1.lastIndexOf(','));
-            
-            var map_str = ` 
-            <script type="text/javascript" class="map_container">
+                // $("#container").html("");
                 const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
-                map.centerAndZoom(new BMap.Point(`+ Hotel_data[0].location.lng +`, `+ Hotel_data[0].location.lat +`), 13) // 初始化地图，设置中心点坐标和地图级别
+                map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
                 map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
                 map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
                 map.addControl(new BMap.NavigationControl({
                 type: BMAP_NAVIGATION_CONTROL_ZOOM
                 })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
-                const hotelDataArry = [`
-                + map_str_1 +
-                `
+                const hotelDataArry = [
+                    {
+                        name: Hotel_data[0].name ,
+                        location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                    },
+                    {
+                        name: Hotel_data[1].name ,
+                        location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                    },
+                    {
+                        name: Hotel_data[2].name ,
+                        location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                    },
+                    {
+                        name: Hotel_data[3].name ,
+                        location: new BMap.Point( Hotel_data[3].location.lng , Hotel_data[3].location.lat )
+                    },
+                    {
+                        name: Hotel_data[4].name ,
+                        location: new BMap.Point( Hotel_data[4].location.lng , Hotel_data[4].location.lat )
+                    },
                 ]
                 hotelDataArry.forEach(el => {
                 const marker = new BMap.Marker(el.location) // 创建标注点
@@ -1295,12 +1337,10 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
                     offset: new BMap.Size(20)
                 })) // 向标注点添加标注文本
                 })
-            </script>
-            `
+                
             if( Request_city_data_judge ===  1 && Request_city_data_judge_two === 1){
                 $(".Hotel_information .Hotel").remove();
             } 
-            $("#container").append( map_str );
             $(".Hotel_information").append(str);
             Request_city_data_judge_two = 2;
             Request_city_data_judge = 2;
@@ -1308,13 +1348,17 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
             $(".hotelKeyword").val("");
             $(".hotelKeyword").attr("data-positiontype","");
             $(".hotelKeyword").attr("data-position","");
-            alert("该设置地区暂无酒店数据");
+            
+            $(".Hotel_information .Hotel").remove();
+            $(".Hotel_information").append('<div class="Hotel"><div class="error"><img src="images/abc.png">暂无酒店数据</div></div>');
+            // alert("该设置地区暂无酒店数据");
+            $(".modal-body p").html( "该选择范围暂无酒店数据" );
+            $('#myModal').modal('show');
+            $(".loading").html("");
             Jump_execution_scroll_judge = 3;
         }
     })
 }
-
-
 
 
 
@@ -1416,4 +1460,16 @@ $(document).ready(function(){
     search_input_assignment();
     Jump_execution(1);
     window.addEventListener('scroll',_.throttle(Jump_execution_scroll(),1000));
+})
+
+var top_scroll = $("#container").offset().top;
+$(document).scroll(function(){
+    if( $(document).scrollTop() >= top_scroll  ){
+        $("#container").css("position", "fixed" );
+        $("#container").css("top", "40px" );
+    }
+    if( $(document).scrollTop() < top_scroll ){
+        $("#container").css("position", "relative" );
+        $("#container").css("top", 0 );
+    }
 })

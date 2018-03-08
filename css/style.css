@@ -26,7 +26,9 @@ small { font-size: 12px; } /* 小于 12px 的中文很难阅读, 让 small 正�
 /** 重置列表元素 **/
 ul, ol {list-style: none;}
 /** 重置文本格式元素 **/
-a { text-decoration: none; }
+a {
+    text-decoration:  none;
+}
 sup { vertical-align: text-top; } /* 重置, 减少对行高的影响 */
 sub { vertical-align: text-bottom; }
 /** 重置表单元素 **/
@@ -54,4 +56,11 @@ button,input{
 .line{
     border-bottom: 1px solid #000000;
     opacity: 0.1;
+}
+.fixed-slide{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right:136px;
+    bottom:155px;
 }

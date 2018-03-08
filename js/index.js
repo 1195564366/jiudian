@@ -20,7 +20,10 @@ function city_request(){    //封装请求城市数据
 }
 $("#search_btn").click(function(){
     if( $(".city_input").val().length == 0){
-        alert("请先选择城市");
+        // alert("请先选择城市");
+        $(".modal-body p").html( "请先选择城市" );
+        $('#myModal').modal('show');
+        
         return;
     }else{
         var checkTime = "";
@@ -56,7 +59,9 @@ $("#search_btn").click(function(){
                     localStorage.time = $(".time_input").val();
                     window.location.href = "hotel_screening.html";
                 }else{
-                    alert("该城市暂无酒店信息");
+                    // alert("该城市暂无酒店信息");
+                    $(".modal-body p").html( "该城市暂无酒店信息" );
+                    $('#myModal').modal('show');
                 }
             }) 
     }
@@ -137,7 +142,7 @@ function hot_city_data_request( data ){    //请求热门城市数据并追加�
         if(data.code == "hotel_not_found"){
             $(".hot_hotel .hot_hotel_main .error").remove();
             $(".hot_hotel .hot_hotel_main ul li").remove();
-            $(".hot_hotel .hot_hotel_main").append('<div class="error">酒店数据不存在</div>');
+            $(".hot_hotel .hot_hotel_main").append('<div class="error"><img src="images/abc.png">暂无酒店数据</div>');
         }
     })
 }
@@ -156,6 +161,7 @@ $(".time_input").click(function(){
 $(".city_input").click(function(){
    date_time_hide();
 })
+
 
 
 

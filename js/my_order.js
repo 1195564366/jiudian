@@ -92,6 +92,7 @@ function request_data( page,status,orderNo,customerName,checkTime ){
             }   
             order_str += '</table>';
             $(".Order_details table").remove();
+            $(".Order_details .error").remove();
             $(".Order_details").append( order_str ); 
             //评论底下分页动态加载
             $(".Review_page .Middle ").html("");
@@ -132,9 +133,10 @@ function request_data( page,status,orderNo,customerName,checkTime ){
         }else{
             $(".Review_page .Middle ").html("");
             $(".Order_details table").remove();
-            setTimeout(function(){
-                alert("该选项未查询到订单");
-            },100)
+            $(".Order_details .error").remove();
+            $(".Order_details").append('<div class="error">暂无对应订单</div>')
+            // $(".modal-body p").html( "该选项未查询到订单" );
+            // $('#myModal').modal('show');
         }
     })
 }
@@ -206,6 +208,7 @@ function request_data1( page,status,orderNo,customerName,checkTime ){
             }   
             order_str += '</table>';
             $(".Order_details table").remove();
+            $(".Order_details .error").remove();
             $(".Order_details").append( order_str );        
         }
     })
@@ -435,54 +438,63 @@ $("#query").click(function(){
     customerName = $(".customerName").val();
     var time_val = $(".checkTime").val().split(/[^0-9]/ig);
     if( $(".checkTime").val().length !=  0 && time_val.length != 6){
-        alert("输入预定时间段不正确")
+        $(".modal-body p").html( "输入预定时间段不正确" );
+        $('#myModal').modal('show');
         return;
     }
     if( time_val.length == 6){
         if( time_val[1]<1 || time_val[1] >12){
-            alert("入住月不对");
+            $(".modal-body p").html( "入住月不对" );
+            $('#myModal').modal('show');
             return;
         }
         if( time_val[1] == 2 ){
             var days = time_val[0] % 4 == 0 ? 29 : 28;
             if( time_val[2]<1 || time_val[2] > days){
-                alert("入住日不对");
+                $(".modal-body p").html( "入住日不对" );
+                $('#myModal').modal('show');
                 return;
             }
         }
         if( time_val[1] == 1 || time_val[1] == 3 || time_val[1] == 5 || time_val[1] == 7 || time_val[1] == 8 || time_val[1] == 10 || time_val[1] == 12  ){
             if( time_val[2]<1 || time_val[2] >31){
-                alert("入住日不对");
+                $(".modal-body p").html( "入住日不对" );
+                $('#myModal').modal('show');
                 return;
             }
         }
         if( time_val[1] == 4 || time_val[1] == 6 || time_val[1] == 9 || time_val[1] == 11 ){
             if( time_val[2]<1 || time_val[2] >30){
-                alert("入住日不对");
+                $(".modal-body p").html( "入住日不对" );
+                $('#myModal').modal('show');
                 return;
             }
         }
     
         if( time_val[4]<1 || time_val[4] >12){
-            alert("退房月不对");
+            $(".modal-body p").html( "退房月不对" );
+            $('#myModal').modal('show');
             return;
         }
         if( time_val[4] == 2 ){
             var days = time_val[0] % 4 == 0 ? 29 : 28;
             if( time_val[5]<1 || time_val[5] > days){
-                alert("退房日不对");
+                $(".modal-body p").html( "退房日不对" );
+                $('#myModal').modal('show');
                 return;
             }
         }
         if( time_val[4] == 1 || time_val[4] == 3 || time_val[4] == 5 || time_val[4] == 7 || time_val[4] == 8 || time_val[4] == 10 || time_val[4] == 12  ){
             if( time_val[5]<1 || time_val[5] >31){
-                alert("退房日不对");
+                $(".modal-body p").html( "退房日不对" );
+                $('#myModal').modal('show');
                 return;
             }
         }
         if( time_val[4] == 4 || time_val[4] == 6 || time_val[4] == 9 || time_val[4] == 11 ){
             if( time_val[5]<1 || time_val[5] >30){
-                alert("退房日不对");
+                $(".modal-body p").html( "退房日不对" );
+                $('#myModal').modal('show');
                 return;
             }
         }
@@ -494,11 +506,13 @@ $("#query").click(function(){
         var Check_out_time = time_stamp*1000;
         console.log( Check_out_time );
         if( Check_time == Check_out_time ){
-            alert( "入住时间不能和退房时间相同" )
+            $(".modal-body p").html( "入住时间不能和退房时间相同" );
+            $('#myModal').modal('show');
             return;
         }
-        if( Check_time < Check_out_time ){
-            alert( "入住时间不能小于退房时间相同" )
+        if( Check_time > Check_out_time ){
+            $(".modal-body p").html( "入住时间不能小于退房时间" );
+            $('#myModal').modal('show');
             return;
         }
         checkTime = Check_time+","+Check_out_time;
@@ -525,11 +539,13 @@ $(".Order_details").on('click','button',function(){
             return;
         }
         if( data.code == "order_not_found"){
-            alert("订单不存在")
+            $(".modal-body p").html( "订单不存在" );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code == "order_complete_fail"){
-            alert("完成订单失败")
+            $(".modal-body p").html( "订单完成订单失败" );
+            $('#myModal').modal('show');
             return;
         }
     })

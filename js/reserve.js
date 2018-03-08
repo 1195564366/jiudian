@@ -225,12 +225,14 @@ $(".Check_out_calendar .day ul").on('click','li',function(){
     
     if( $(this).attr("class") != "disable"){
         if( $(".Check").attr("data-time") == undefined || $(".Check").attr("data-time") == ""){
-            alert("请先选择入住时间");
+            $(".modal-body p").html( "请先选择入住时间" );
+            $('#myModal').modal('show');
             Check_out_judge = 1;
             return;
         }
         if( $(this).attr("data-time") <= $(".Check").attr("data-time")){
-            alert("退房时间不能等于或小于入住时间");
+            $(".modal-body p").html( "退房时间不能等于或小于入住时间" );
+            $('#myModal').modal('show');
             Check_out_judge = 1;
             return;
         }
@@ -271,8 +273,8 @@ $(".Check_out_calendar .day ul").on('click','li',function(){
         var Check_data_time = Number( $(".Check").attr("data-time") );
         var time= $(this).attr("data-time") - $(".Check").attr("data-time");
             $(".Statistics").html( "共"+ Math.ceil(time/86400000) + "晚");
-            $(".Room_price span").html( room_money*Math.ceil( (Check_out_data_time-Check_data_time)/86400000) );
-            $(".all_price span").html( room_money*Math.ceil(( Check_out_data_time-Check_data_time)/86400000) );
+            $(".Room_price span").html( room_money*Math.ceil( (Check_out_data_time-Check_data_time)/86400000)*$(".count").val() );
+            $(".all_price span").html( room_money*Math.ceil(( Check_out_data_time-Check_data_time)/86400000)*$(".count").val() );
     }
 })
 
@@ -359,6 +361,7 @@ var Check_mian_judge = 1;
 var Check_out_mian_judge = 1;
 $(".Check").click(function(){
     event.stopPropagation();
+    $(".Check_out_calendar").hide();
     if( Check_judge === 1){
         $(".Check_calendar").show();
         Check_judge = 2;
@@ -371,9 +374,11 @@ $(".Check").click(function(){
 })
 var Check_out_judge = 1;
 $(".Check_out").click(function(){
+    $(".Check_calendar").hide();
     event.stopPropagation();
     if( $(".Check").val().length == 0 ||  $(".Check").attr("data-time") == undefined || $(".Check").attr("data-time") == ""){
-        alert("请先选择入住时间")
+        $(".modal-body p").html( "请先选择入住时间" );
+        $('#myModal').modal('show');
         return;
     }
     if( Check_out_judge === 1){
@@ -481,11 +486,13 @@ function add_content(){ //动态添加页面跳转来的内容
 //房间数量用户选择判断
 $(".count").blur(function(){
     if( Number( $(this).val()) < 1 ){
-        alert("房间数量不能低于1间");
+        $(".modal-body p").html( "房间数量不能低于1间" );
+        $('#myModal').modal('show');
         $(this).val( 1 );
     }
     if( Number( $(this).val()) > room_count ){
-        alert( "房间数量超过剩余房间数量,剩余房间数"+ room_count);
+        $(".modal-body p").html( "房间数量超过剩余房间数量,剩余房间数"+ room_count );
+        $('#myModal').modal('show');
         $(this).val( room_count );
     }
     var x= $(this).val();
@@ -510,8 +517,9 @@ $(".count").keyup(function(){
         $(".plus").css( "background", 'url("images/icon_minus_2.png") no-repeat 9px 9px');
     }
     if( Number( $(this).val()) > room_count ){
-        alert( "剩余2间" );
-        $(this).val( 2 );
+        $(".modal-body p").html( "剩余"+ room_count +"间" );
+        $('#myModal').modal('show');
+        $(this).val( room_count );
         var time_i = Number($(".Check_out").attr("data-time"))-Number($(".Check").attr("data-time"));
         $(".Room_price span").html( room_money *Math.ceil( time_i/86400000)*$(this).val() );
         $(".all_price span").html( room_money *Math.ceil( time_i/86400000)*$(this).val() );
@@ -527,8 +535,13 @@ $(".plus").click(function(){
     x--;
     $(".count").val( x );
     var time_i = Number($(".Check_out").attr("data-time"))-Number($(".Check").attr("data-time"));
-    $(".Room_price span").html( room_money *Math.ceil( time_i/86400000)*x );
-    $(".all_price span").html( room_money *Math.ceil( time_i/86400000)*x );
+    if( $(".Check").attr("data-time")=="" || $(".Check").attr("data-time")== undefined || $(".Check_out").attr("data-time")=="" || $(".Check_out").attr("data-time")== undefined){
+        $(".Room_price span").html( 0 );
+        $(".all_price span").html( 0 );
+    }else{
+        $(".Room_price span").html( room_money *Math.ceil( time_i/86400000)*x );
+        $(".all_price span").html( room_money *Math.ceil( time_i/86400000)*x );
+    }
     if( x == 1){
         $(".plus").attr("disabled",true);
         $(".plus").css( "background", 'url("images/icon_minus.png") no-repeat 9px 9px');
@@ -544,8 +557,13 @@ $(".reduce").click(function(){
     x++;
     $(".count").val( x );
     var time_i = Number($(".Check_out").attr("data-time"))-Number($(".Check").attr("data-time"));
-    $(".Room_price span").html( room_money *Math.ceil( time_i/86400000)*x );
-    $(".all_price span").html( room_money *Math.ceil( time_i/86400000)*x );
+    if( $(".Check").attr("data-time")=="" || $(".Check").attr("data-time")== undefined || $(".Check_out").attr("data-time")=="" || $(".Check_out").attr("data-time")== undefined){
+        $(".Room_price span").html( 0 );
+        $(".all_price span").html( 0 );
+    }else{
+        $(".Room_price span").html( room_money *Math.ceil( time_i/86400000)*x );
+        $(".all_price span").html( room_money *Math.ceil( time_i/86400000)*x );
+    }
     if( x == room_count){
         $(".reduce").attr("disabled",true);
         $(".reduce").css( "background", 'url("images/icon_minus.png") no-repeat 9px 9px');
@@ -578,25 +596,33 @@ $(".user_phone input").keyup(function(){        //联系方式 input输入事件
 })
 //提交订单
 $(".Submit_Order").click(function(){
- 
+    if( $(".Check").attr( "data-time" ) == undefined || $(".Check").attr( "data-time" ) == "" || $(".Check_out").attr( "data-time" ) == undefined || $(".Check_out").attr( "data-time" ) == ""){
+        $(".modal-body p").html( "请先选择入住和退房时间" );
+        $('#myModal').modal('show');
+        return;
+    }
     if( $(".user_name input").val().length <= 0 ){
+        $(".modal-body p").html( "请输入姓名" );
+        $('#myModal').modal('show');
         $(".user_name .error").html("请输入姓名");
         return;
     }
     if( $(".user_phone input").val().length <= 0 ){
+        $(".modal-body p").html( "请输入手机号码" );
+        $('#myModal').modal('show');
         $(".user_phone .error").html("请输入手机号码");
         return;
     }
     if( $(".user_phone input").val().length != 11 ){
+        $(".modal-body p").html( "手机号码位数不对" );
+        $('#myModal').modal('show');
         $(".user_phone .error").html("手机号码位数不对");
         return;
     }
     if(  !(/^1[34578]\d{9}$/.test( $(".user_phone input").val() )) ){
+        $(".modal-body p").html( "手机号码格式不对" );
+        $('#myModal').modal('show');
         $(".user_phone .error").html("手机号码格式不对");
-        return;
-    }
-    if( $(".Check").attr( "data-time" ) == undefined || $(".Check").attr( "data-time" ) == "" || $(".Check_out").attr( "data-time" ) == undefined || $(".Check_out").attr( "data-time" ) == ""){
-        alert( "请先选择入住和退房事件" );
         return;
     }
     var token = localStorage.token;
@@ -633,27 +659,28 @@ $(".Submit_Order").click(function(){
             return
         }
         if( data.code = "phone_format_error" ){
-            alert("手机号码格式错误")
-            return;
-        }
-        if( data.code = "phone_format_error" ){
-            alert("手机号码格式错误")
+            $(".modal-body p").html( "手机号码格式错误" );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code = "account_token_invalid"){
-            alert("身份已失效,请重新登陆")
+            $(".modal-body p").html( "身份已失效,请重新登陆" );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code = "room_not_found"){
-            alert("房间已经被定完")
+            $(".modal-body p").html( "房间已经被定完" );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code = "room_number_not_enough"){
-            alert("可预订房间数小于预订房间数")
+            $(".modal-body p").html( "可预订房间数小于预订房间数" );
+            $('#myModal').modal('show');
             return;
         }
         if( data.code = "order_create_fail"){
-            alert("订单创建失败,请重新创建")
+            $(".modal-body p").html( "订单创建失败,请重新创建" );
+            $('#myModal').modal('show');
             return;
         }
     })

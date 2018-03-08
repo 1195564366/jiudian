@@ -173,13 +173,14 @@ $("#submit").click(function(){
                 }
                 if( data.code == "account_token_invalid" ){
                     evaluate_judge = 2;
-                    alert("身份已失效,请重新登陆,点击后跳转登陆页面");
-                    window.location.href = "login.html";
+                    $(".modal-body p").html( '身份已失效,请重新登陆,<a href="login.html">点击后跳转登陆页面<a/>' );
+                    $('#myModal').modal('show');
                     return;
                 }
                 if( data.code == "image_create_fail" ){
                     evaluate_judge = 2;
-                    alert("图片上传失败,请重新上传");
+                    $(".modal-body p").html( '图片上传失败,请重新上传' );
+                    $('#myModal').modal('show');
                     return;
                 }
             } )
@@ -187,15 +188,14 @@ $("#submit").click(function(){
     } 
     
     if( score == "" ){
-        alert("请选取评分等级");
+        $(".modal-body p").html( '请选取评分等级' );
+        $('#myModal').modal('show');
         return;
     }
     if( $(".evaluation_content").val().length == 0 ){
-        alert("请填写评价内容");
+        $(".modal-body p").html( '请填写评价内容' );
+        $('#myModal').modal('show');
         return;
-    }
-    if( picturePathArry.length != 0 ){
-        
     }
     if( picturePathArry.length == 0 ){
         picturePathArry = "";
@@ -223,21 +223,23 @@ $("#submit").click(function(){
             })
             .done(function(data){
                 if( data.code == "success" ){
-                    alert("评价成功,点击返回,订单页面");
-                    window.location.href = "my_order.html";
+                    $(".modal-body p").html( '评价成功,<a href="my_order.html">点击返回订单页面</a>' );
+                    $('#myModal').modal('show');
                     return;
                 }
                 if( data.code == "account_token_invalid" ){
-                    alert("身份已失效,请重新登陆");
+                    $(".modal-body p").html( '身份已失效,请重新登陆' );
+                    $('#myModal').modal('show');
                     return;
                 }
                 if( data.code == "already_evaluated" ){
-                    alert("该订单已经评价过了,点击返回,订单页面");
-                    window.location.href = "my_order.html";
+                    $(".modal-body p").html( '该订单已经评价过了,<a href="my_order.html">点击返回订单页面</a>' );
+                    $('#myModal').modal('show');
                     return;
                 }
                 if( data.code == "evaluate_fail" ){
-                    alert("评价失败");
+                    $(".modal-body p").html( '评价失败' );
+                    $('#myModal').modal('show');
                     return;
                 }
             })

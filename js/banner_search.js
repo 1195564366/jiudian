@@ -70,11 +70,26 @@ function city_title_switch(){    //城市拼音动态切换和动态设置每个
 $(".city_data").on("click",".city_name li",function(){  //选中城市显示在城市input输入框
     $(".city_input").val( $(this).html() );
     setTimeout(function(){
+        $(".hotelKeyword").val("");
+        $(".hotelKeyword").attr("data-price","");
+        $(".hotelKeyword").attr("data-starlevel","");
+        $(".hotelKeyword").attr("data-speciallevel","");
+        $(".hotelKeyword").attr("data-brand","");
+        $(".hotelKeyword").attr("data-positiontype","");
+        $(".hotelKeyword").attr("data-position","");
+        $(".hotelKeyword").attr("data-positiontype","");
         $(".city_input").parent().find(".city_data").hide();
         $(".city_data").find(".city_name").remove();
     },100);
 })
-
+$(".city_input").keyup(function(){
+    if( $(this).val().length >0 ){
+        $(".city_data").hide();
+    }
+    if( $(this).val().length == 0 ){
+        $(".city_data").show();
+    }
+})
 
 
 // 日期

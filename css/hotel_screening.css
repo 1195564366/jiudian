@@ -817,6 +817,14 @@ header{
     box-sizing: border-box;
     border-bottom: 1px solid rgba(0,0,0,0.20);
 }
+.Hotel_main .Hotel_information .Hotel .error{
+    text-align: center;
+    line-height: 171px;
+    font-size: 32px;
+}
+.Hotel_main .Hotel_information .Hotel .error img{
+    vertical-align: middle;
+}
 .Hotel_main .Hotel_information .Hotel .Hotel_img{
     width: 170px;
     height: 156px;

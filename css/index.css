@@ -360,6 +360,12 @@ header{
     width: 220px;
     height: 220px;
     position: relative;
+    overflow: hidden;
+}
+.hot_hotel .hot_hotel_main li:hover img{
+    /* top: 152px; */
+    width: 280px;
+    height: 280px;
 }
 .hot_hotel .hot_hotel_main li:nth-child(4),.hot_hotel .hot_hotel_main li:last-child{
     margin-right:0;
@@ -367,12 +373,15 @@ header{
 .hot_hotel .hot_hotel_main li img{
     width: 220px;
     height: 220px;
+    transition: width 1s,height 1s;
 }
 .hot_hotel .hot_hotel_main li .mask{
     position: absolute;
     width: 220px;
     height: 68px;
     background: rgba(255,255,255,0.84);
+    /* top: 220px;
+    transition: top 1s; */
     bottom: 0;
 }
 .hot_hotel .hot_hotel_main li .mask .name{

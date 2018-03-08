@@ -26,7 +26,8 @@ $(".verification_information .see_yzm").click(function(){   //身份验证 查�
 
 $(".verification_information .next_step").click(function(){     //身份验证 按钮点击事件
     if( $(".verification_information .yzm").val() != SMS_yzm_storage ){
-        alert("短信验证码错误");
+        $(".modal-body p").html( "短信验证码错误" );
+        $('#myModal').modal('show');
         return;
     }
     if( $(".verification_information .yzm").val() == SMS_yzm_storage ){
@@ -104,27 +105,33 @@ $(".reset_pwd_information .next_step").click(function(){    //
             return;
         }
         if( data.code == "param_incomplete"){
-            alert("修改密码信息填写不完整,请刷新页面后重新填写修改信息");
+            $(".modal-body p").html( "修改密码信息填写不完整,请刷新页面后重新填写修改信息" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "phone_format_error"){
-            alert("手机号码格式不正确,请刷新页面后重新填写");
+            $(".modal-body p").html( "手机号码格式不正确,请刷新页面后重新填写" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "password_format_error"){
-            alert("密码格式不正确,请刷新页面后重新填写");
+            $(".modal-body p").html( "密码格式不正确,请刷新页面后重新填写" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "sms_captcha_not_found"){
-            alert("短信验证码不存在,请刷新页面后重新获取");
+            $(".modal-body p").html( "短信验证码不存在,请刷新页面后重新获取" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "sms_captcha_fail"){
-            alert("短信验证码错误,请刷新页面后重新获取");
+            $(".modal-body p").html( "短信验证码错误,请刷新页面后重新获取" );
+            $('#myModal').modal('show');
             return
         }
         if( data.code == "account_not_found"){
-            alert("该手机号码尚未注册账号,请先注册账号");
+            $(".modal-body p").html( "该手机号码尚未注册账号,请先注册账号" );
+            $('#myModal').modal('show');
             return
         }
     })
@@ -132,6 +139,7 @@ $(".reset_pwd_information .next_step").click(function(){    //
 
 $(document).ready(function(){
     register_header();
+    modal();
     register_footer();
     Gvc( $(".verification_information .graphical_yzm") );
 })

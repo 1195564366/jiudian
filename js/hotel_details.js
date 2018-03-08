@@ -382,12 +382,16 @@ $(".Check_out_calendar .day ul").on('click','li',function(){
     
     if( $(this).attr("class") != "disable"){
         if( $(".Check").attr("data-time") == undefined || $(".Check").attr("data-time") == ""){
-            alert("请先选择入住时间");
+            // alert("请先选择入住时间");
+            $(".modal-body p").html( "请先选择入住时间" );
+            $('#myModal').modal('show');
             Check_out_judge = 1;
             return;
         }
         if( $(this).attr("data-time") <= $(".Check").attr("data-time")){
-            alert("退房时间不能等于或小于入住时间");
+            // alert("退房时间不能等于或小于入住时间");
+            $(".modal-body p").html( "退房时间不能等于或小于入住时间" );
+            $('#myModal').modal('show');
             Check_out_judge = 1;
             return;
         }
@@ -531,7 +535,9 @@ var Check_out_judge = 1;
 $(".Check_out").click(function(){
     event.stopPropagation();
     if( $(".Check").val().length == 0 ||  $(".Check").attr("data-time") == undefined || $(".Check").attr("data-time") == ""){
-        alert("请先选择入住时间")
+        // alert("请先选择入住时间")
+        $(".modal-body p").html( "请先选择入住时间" );
+        $('#myModal').modal('show');
         return;
     }
     if( Check_out_judge === 1){
@@ -547,11 +553,27 @@ $(".Check_out").click(function(){
 
 $(".Inquire_room").click(function(){
     if( $(".Check").attr("data-time") != undefined  && $(".Check_out").attr("data-time") == undefined){
-        alert("入住和退房时间必须同时选择或者同时不选")
+        // alert("入住和退房时间必须同时选择或者同时不选")
+        $(".modal-body p").html( "入住和退房时间必须同时选择或者同时不选" );
+        $('#myModal').modal('show');
         return;
     }
     if( $(".Check").attr("data-time") == undefined  && $(".Check_out").attr("data-time") != undefined){
-        alert("入住和退房时间必须同时选择或者同时不选")
+        // alert("入住和退房时间必须同时选择或者同时不选")
+        $(".modal-body p").html( "入住和退房时间必须同时选择或者同时不选" );
+        $('#myModal').modal('show');
+        return;
+    }
+    if( $(".Check").attr("data-time") != ""  && $(".Check_out").attr("data-time") == ""){
+        // alert("入住和退房时间必须同时选择或者同时不选")
+        $(".modal-body p").html( "入住和退房时间必须同时选择或者同时不选" );
+        $('#myModal').modal('show');
+        return;
+    }
+    if( $(".Check").attr("data-time") == ""  && $(".Check_out").attr("data-time") != ""){
+        // alert("入住和退房时间必须同时选择或者同时不选")
+        $(".modal-body p").html( "入住和退房时间必须同时选择或者同时不选" );
+        $('#myModal').modal('show');
         return;
     }
     var checkTime = "";
@@ -716,8 +738,8 @@ function comment_loading( page , sort){
                 if( evaluate_data[i].picture.length != 0 ){
                     img_str += '<br><br>'
                     for( a=0;a<evaluate_data[i].picture.length;a++ ){
-                        // img_str += '<img src="'+ url_img + evaluate_data[i].picture[a] +'" alt="">'
-                        img_str += '<img src="images/index_banner.png" alt="">'
+                        img_str += '<img src="'+ url_img + evaluate_data[i].picture[a] +'" alt="">'
+                        // img_str += '<img src="images/index_banner.png" alt="">'
                     }
                 }
                 for(a=0;a<evaluate_data[i].score;a++){
@@ -796,7 +818,9 @@ function comment_loading( page , sort){
             //评论底下分页动态加载
             $(".Review_page .Middle ").html("");
             setTimeout(function(){
-                alert( "该评价暂无评论" )
+                // alert( "该评价暂无评论" )
+                $(".modal-body p").html( "该评价暂无评论" );
+                $('#myModal').modal('show');
             },200)
         }
     })
