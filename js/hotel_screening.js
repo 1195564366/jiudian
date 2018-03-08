@@ -1079,10 +1079,121 @@ function Jump_execution(page){// 首页跳转过来执行方法
                     star_level_str = "";
                 }
                 
-                
-                
+                if( Hotel_data[0] != undefined ){
                     const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
-                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng , Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[1] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[2] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        },
+                        {
+                            name: Hotel_data[2].name ,
+                            location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[3] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        },
+                        {
+                            name: Hotel_data[2].name ,
+                            location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                        },
+                        {
+                            name: Hotel_data[3].name ,
+                            location: new BMap.Point( Hotel_data[3].location.lng , Hotel_data[3].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[4] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
                     map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
                     map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
                     map.addControl(new BMap.NavigationControl({
@@ -1117,10 +1228,12 @@ function Jump_execution(page){// 首页跳转过来执行方法
                         offset: new BMap.Size(20)
                     })) // 向标注点添加标注文本
                     })
+                }
                 
                 
                 $(".Hotel_information").append(str);
             }else{
+                $("#container div").remove();
                 $(".modal-body p").html( "暂无酒店信息" );
                 $('#myModal').modal('show');
             }
@@ -1253,7 +1366,7 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
             Jump_execution_scroll_judge = 2;
             var str = "";
             var Hotel_data = data.data.hotelList;
-
+            
             
             var star_level = "";    //保存星级图标个数
             var star_level_str = "";//保存星级图标
@@ -1299,44 +1412,159 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
                 </div>
                 `
                 star_level_str = "";
+                if( Hotel_data[0] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[1] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[2] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        },
+                        {
+                            name: Hotel_data[2].name ,
+                            location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[3] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        },
+                        {
+                            name: Hotel_data[2].name ,
+                            location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                        },
+                        {
+                            name: Hotel_data[3].name ,
+                            location: new BMap.Point( Hotel_data[3].location.lng , Hotel_data[3].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
+                if( Hotel_data[4] != undefined ){
+                    const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
+                    map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
+                    map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
+                    map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
+                    map.addControl(new BMap.NavigationControl({
+                    type: BMAP_NAVIGATION_CONTROL_ZOOM
+                    })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
+                    const hotelDataArry = [
+                        {
+                            name: Hotel_data[0].name ,
+                            location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
+                        },
+                        {
+                            name: Hotel_data[1].name ,
+                            location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
+                        },
+                        {
+                            name: Hotel_data[2].name ,
+                            location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
+                        },
+                        {
+                            name: Hotel_data[3].name ,
+                            location: new BMap.Point( Hotel_data[3].location.lng , Hotel_data[3].location.lat )
+                        },
+                        {
+                            name: Hotel_data[4].name ,
+                            location: new BMap.Point( Hotel_data[4].location.lng , Hotel_data[4].location.lat )
+                        }
+                    ]
+                    hotelDataArry.forEach(el => {
+                    const marker = new BMap.Marker(el.location) // 创建标注点
+                    map.addOverlay(marker) // 向地图添加标注点
+                    marker.setLabel(new BMap.Label(el.name, {
+                        offset: new BMap.Size(20)
+                    })) // 向标注点添加标注文本
+                    })
+                }
             }
-                // $("#container").html("");
-                const map = new BMap.Map("container") // 创建一个地图实例，其参数可以是元素id也可以是元素对象
-                map.centerAndZoom(new BMap.Point(Hotel_data[0].location.lng, Hotel_data[0].location.lat ), 13) // 初始化地图，设置中心点坐标和地图级别
-                map.enableScrollWheelZoom(true) // 启用滚轮放大缩小，默认禁用
-                map.addControl(new BMap.ScaleControl()) // 添加控件，比例尺控件
-                map.addControl(new BMap.NavigationControl({
-                type: BMAP_NAVIGATION_CONTROL_ZOOM
-                })) // 添加控件，平移缩放控件，type值表示只显示控件的缩放部分功能
-                const hotelDataArry = [
-                    {
-                        name: Hotel_data[0].name ,
-                        location: new BMap.Point( Hotel_data[0].location.lng , Hotel_data[0].location.lat )
-                    },
-                    {
-                        name: Hotel_data[1].name ,
-                        location: new BMap.Point( Hotel_data[1].location.lng , Hotel_data[1].location.lat )
-                    },
-                    {
-                        name: Hotel_data[2].name ,
-                        location: new BMap.Point( Hotel_data[2].location.lng , Hotel_data[2].location.lat )
-                    },
-                    {
-                        name: Hotel_data[3].name ,
-                        location: new BMap.Point( Hotel_data[3].location.lng , Hotel_data[3].location.lat )
-                    },
-                    {
-                        name: Hotel_data[4].name ,
-                        location: new BMap.Point( Hotel_data[4].location.lng , Hotel_data[4].location.lat )
-                    },
-                ]
-                hotelDataArry.forEach(el => {
-                const marker = new BMap.Marker(el.location) // 创建标注点
-                map.addOverlay(marker) // 向地图添加标注点
-                marker.setLabel(new BMap.Label(el.name, {
-                    offset: new BMap.Size(20)
-                })) // 向标注点添加标注文本
-                })
+
+                
                 
             if( Request_city_data_judge ===  1 && Request_city_data_judge_two === 1){
                 $(".Hotel_information .Hotel").remove();
@@ -1349,6 +1577,7 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
             $(".hotelKeyword").attr("data-positiontype","");
             $(".hotelKeyword").attr("data-position","");
             
+            $("#container div").remove();
             $(".Hotel_information .Hotel").remove();
             $(".Hotel_information").append('<div class="Hotel"><div class="error"><img src="images/abc.png">暂无酒店数据</div></div>');
             // alert("该设置地区暂无酒店数据");

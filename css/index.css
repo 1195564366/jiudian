@@ -353,6 +353,9 @@ header{
     font-weight: bold;
     line-height: 512px;
 }
+.hot_hotel .hot_hotel_main .error img{
+    vertical-align: middle;
+}
 .hot_hotel .hot_hotel_main li{
     float: left;
     margin-right: 43.333333333333336px;
@@ -363,17 +366,17 @@ header{
     overflow: hidden;
 }
 .hot_hotel .hot_hotel_main li:hover img{
-    /* top: 152px; */
     width: 280px;
     height: 280px;
+    transform: scale(1.2);  
 }
 .hot_hotel .hot_hotel_main li:nth-child(4),.hot_hotel .hot_hotel_main li:last-child{
     margin-right:0;
 }
 .hot_hotel .hot_hotel_main li img{
+    transition: all 1s;
     width: 220px;
     height: 220px;
-    transition: width 1s,height 1s;
 }
 .hot_hotel .hot_hotel_main li .mask{
     position: absolute;
