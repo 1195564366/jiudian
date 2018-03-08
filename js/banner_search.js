@@ -67,6 +67,7 @@ function city_title_switch(){    //城市拼音动态切换和动态设置每个
     });
 }
 
+
 $(".city_data").on("click",".city_name li",function(){  //选中城市显示在城市input输入框
     $(".city_input").val( $(this).html() );
     setTimeout(function(){
@@ -79,7 +80,42 @@ $(".city_data").on("click",".city_name li",function(){  //选中城市显示在�
         $(".hotelKeyword").attr("data-position","");
         $(".hotelKeyword").attr("data-positiontype","");
         $(".city_input").parent().find(".city_data").hide();
-        $(".city_data").find(".city_name").remove();
+        $(".position .unlimited").addClass("active");
+        $(".price .unlimited").addClass("active");
+        $(".star .unlimited").addClass("active");
+        $(".brand .unlimited").addClass("active");
+        data_i =   "";
+        var li_img1 = $(".price ul li img");
+        for( i=0;i<li_img1.length;i++ ){
+            var img_src = $(li_img1[i]).attr("src");
+            img_src = img_src.split("/");
+            img_src = img_src[img_src.length-2]+"/icon_checkbox.png";
+            $(li_img1[i]).attr("src" , img_src);
+            $(li_img1[i]).attr("data-src" , "icon_checkbox_choose.png");
+        } 
+        star_i =   "";
+        var li_img2 = $(".star ul li img");
+        for( i=0;i<li_img2.length;i++ ){
+            var img_src = $(li_img2[i]).attr("src");
+            img_src = img_src.split("/");
+            img_src = img_src[img_src.length-2]+"/icon_checkbox.png";
+            $(li_img2[i]).attr("src" , img_src);
+            $(li_img2[i]).attr("data-src" , "icon_checkbox_choose.png");
+        }
+        brand_a =   "";
+        var li_img3 = $(".brand ul li img");
+        for( i=0;i<li_img3.length;i++ ){
+            var img_src = $(li_img3[i]).attr("src");
+            img_src = img_src.split("/");
+            img_src = img_src[img_src.length-2]+"/icon_checkbox.png";
+            $(li_img3[i]).attr("src" , img_src);
+            $(li_img3[i]).attr("data-src" , "icon_checkbox_choose.png");
+        } 
+
+        $(".Custom_price button").css("background","#959595");
+        $(".Custom_price button").css("opacity",.5);
+        $(".Custom_price button").attr("disabled",true);
+            $(".city_data").find(".city_name").remove();
     },100);
 })
 $(".city_input").keyup(function(){
