@@ -406,7 +406,7 @@ $(".Metro_station").click(function(){
                     }
                     var str = ""
                     for(i=0;i<Metro_station_data[Metro_station[0]].length;i++){
-                        str += '<li title="'+ Metro_station_data[Metro_station[0]][i] +'"站>'+ Metro_station_data[Metro_station[0]][i] +'站</li>';
+                        str += '<li title="'+ Metro_station_data[Metro_station[0]][i] +'">'+ Metro_station_data[Metro_station[0]][i] +'</li>';
                     }
                     $(".Metro_station_name .title li").remove();
                     $(".Metro_station_name .title ul").append( Metro_station_str );
@@ -447,7 +447,7 @@ $(".Metro_station_name .title ul").on('mouseover','li',function(){
     var this_Metro_station = Metro_station_data[ this_Metro_station_name ];
     var str = ""
     for(i=0;i<this_Metro_station.length;i++){
-        str += '<li title="'+ this_Metro_station[i] +'站">'+ this_Metro_station[i] +'站</li>'
+        str += '<li title="'+ this_Metro_station[i] +'">'+ this_Metro_station[i] +'</li>'
     }
     $(".Metro_station_name .main ul li").remove();
     $(".Metro_station_name .main ul").append( str );
@@ -1282,6 +1282,7 @@ $("#search_btn").click(function(){
         // alert("请先选择城市");
         $(".modal-body p").html( "请先选择城市" );
         $('#myModal').modal('show');
+        return;
     }else{
         page_btn = 2;
         Request_city_data_judge = 1;
@@ -1315,6 +1316,9 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
     if( $(".hotelKeyword").attr("data-positionType") != undefined &&  $(".hotelKeyword").attr("data-position") != undefined ){
         positionType = $(".hotelKeyword").attr("data-positionType");
         position = $(".hotelKeyword").attr("data-position");
+    }
+    if( position == hotelKeyword ){
+        hotelKeyword = "";
     }
     var priceRange = "";    //价格区间，下限价格和上限价格，用英文逗号拼成字符串
     if( $(".hotelKeyword").attr("data-price") != undefined ){
@@ -1563,9 +1567,6 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
                     })
                 }
             }
-
-                
-                
             if( Request_city_data_judge ===  1 && Request_city_data_judge_two === 1){
                 $(".Hotel_information .Hotel").remove();
             } 
@@ -1573,9 +1574,9 @@ function  Request_city_data( page , overallRating , price , distance){  //搜索
             Request_city_data_judge_two = 2;
             Request_city_data_judge = 2;
         }else{
-            $(".hotelKeyword").val("");
-            $(".hotelKeyword").attr("data-positiontype","");
-            $(".hotelKeyword").attr("data-position","");
+            // $(".hotelKeyword").val("");
+            // $(".hotelKeyword").attr("data-positiontype","");
+            // $(".hotelKeyword").attr("data-position","");
             
             $("#container div").remove();
             $(".Hotel_information .Hotel").remove();

@@ -820,10 +820,12 @@ header{
 .Hotel_main .Hotel_information .Hotel .error{
     text-align: center;
     line-height: 171px;
-    font-size: 32px;
+    font-size: 16px;
 }
 .Hotel_main .Hotel_information .Hotel .error img{
     vertical-align: middle;
+    width: 80px;
+    height: 80px;
 }
 .Hotel_main .Hotel_information .Hotel .Hotel_img{
     width: 170px;

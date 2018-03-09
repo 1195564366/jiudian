@@ -93,6 +93,8 @@ $(".city_data").on("click",".city_name li",function(){  //选中城市显示在�
             $(li_img1[i]).attr("src" , img_src);
             $(li_img1[i]).attr("data-src" , "icon_checkbox_choose.png");
         } 
+        $(".lower_limit").val("");
+        $(".Upper_limit").val("");
         star_i =   "";
         var li_img2 = $(".star ul li img");
         for( i=0;i<li_img2.length;i++ ){
